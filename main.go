@@ -1,4 +1,4 @@
-//-----------------------------------OANDA-QUOTES----------------------
+//-----------------------------------OANDA_QUOTES----------------------
 
 package main
 
@@ -14,15 +14,6 @@ var (
 	account = flag.Int64("account", 3914094, "Oanda account.")
 	instrs  []string
 )
-
-type NbOandaTick struct {
-	instrs string
-	tick   string
-}
-
-type I interface {
-	M()
-}
 
 func main() {
 	flag.Parse()
@@ -73,7 +64,6 @@ func main() {
 			Ask:    tick.Ask,
 			Status: tick.Status,
 		}
-		writeParquetTEST(&tickParquet)
 
 		// priceServer.Stop()
 	})
