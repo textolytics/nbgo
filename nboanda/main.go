@@ -67,13 +67,13 @@ func main() {
 		}
 		fmt.Println("Received tick:", instrs, tick)
 		fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
-		tickParquet := oanda.PriceTick{
-			Time:   tick.Time,
-			Bid:    tick.Bid,
-			Ask:    tick.Ask,
-			Status: tick.Status,
-		}
-		writeParquetTEST(&tickParquet)
+		// tickParquet := oanda.PriceTick{
+		// 	Time:   tick.Time,
+		// 	Bid:    tick.Bid,
+		// 	Ask:    tick.Ask,
+		// 	Status: tick.Status,
+		// }
+		//		writeParquetTEST(&tickParquet)
 
 		// priceServer.Stop()
 	})
