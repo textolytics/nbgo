@@ -47,36 +47,38 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	// fmt.Println(instruments)
+	fmt.Println(instruments)
 
-	for i := range instruments {
-		fmt.Println(i)
-		instrs = append(instrs, i)
-	}
+	// for i := range instruments {
+	// 	fmt.Println(i)
+	// 	instrs = append(instrs, i)
+	// }
 
-	// Create and run a NewPriceServer server.
-	priceServer, err := client.NewPriceServer(instrs...)
-	if err != nil {
-		panic(err)
-	}
+	// // Create and run a NewPriceServer server.
+	// priceServer, err := client.NewPriceServer(instrs...)
+	// if err != nil {
+	// 	panic(err)
+	// }
 
-	priceServer.ConnectAndHandle(func(instrs string, tick oanda.PriceTick) {
-		if err != nil {
-			fmt.Println("Received err:", err)
-			panic(err)
-		}
-		fmt.Println("Received tick:", instrs, tick)
-		fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
-		// tickParquet := oanda.PriceTick{
-		// 	Time:   tick.Time,
-		// 	Bid:    tick.Bid,
-		// 	Ask:    tick.Ask,
-		// 	Status: tick.Status,
-		// }
+	// priceServer.ConnectAndHandle(func(instrs string, tick oanda.PriceTick) {
+	// 	if err != nil {
+	// 		// fmt.Println("Received err:", err)
+	// 		panic(err)
+	// 	}
+	// 	// fmt.Println("Received tick:", instrs, tick)
+	// 	// fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
+	// 	tickParquet := oanda.PriceTick{
+	// 		Time:   tick.Time,
+	// 		Bid:    tick.Bid,
+	// 		Ask:    tick.Ask,
+	// 		Status: tick.Status,
+	// 	}
+	// 	fmt.Println("INST:%d TICK - %d ",instr, tickParquet)
+
 		//		writeParquetTEST(&tickParquet)
 
 		// priceServer.Stop()
-	})
+	// })
 }
 
 //-----------------------------------Parquet--writeNested----------------------
