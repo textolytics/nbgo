@@ -4,9 +4,9 @@ import (
 	"errors"
 	"time"
 
-	validate "github.com/gogo-validate-2"
 	errs "github.com/pkg/errors"
 	"github.com/teris-io/shortid"
+	validate "gopkg.in/go-playground/validator.v9"
 )
 
 var (
@@ -29,10 +29,20 @@ func (r *redirectService) Find(code string) (*Redirect, error) {
 }
 
 func (r *redirectService) Store(redirect *Redirect) error {
-	if err := validate.Validate(redirect); err != nil {
+	if err := validate.New().Struct(redirect); err != nil {
 		return errs.Wrap(ErrRedirectInvalid, "service.Redirect.Store")
 	}
+	errs.Wrap(ErrRedirectInvalid, "service.Redirect.Store")
 	redirect.Code = shortid.MustGenerate()
 	redirect.CreatedAt = time.Now().UTC().Unix()
 	return r.redirectRepo.Store(redirect)
 }
+
+// func (r *redirectService) Store(redirect *Redirect) error {
+// 	if err := validate.Validate(redirect); err != nil {
+// 		return errs.Wrap(ErrRedirectInvalid, "service.Redirect.Store")
+// 	}
+// 	redirect.Code = shortid.MustGenerate()
+// 	redirect.CreatedAt = time.Now().UTC().Unix()
+// 	return r.redirectRepo.Store(redirect)
+// }

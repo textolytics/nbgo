@@ -6,6 +6,7 @@ import (
 
 	"github.com/go-redis/redis"
 	"github.com/pkg/errors"
+
 	"github.com/tensor-programming/hex-microservice/shortener"
 )
 
@@ -19,7 +20,7 @@ func newRedisClient(redisURL string) (*redis.Client, error) {
 		return nil, err
 	}
 	client := redis.NewClient(opts)
-	_, err = client.Ping().Result()
+	_, err = client.Ping(client.Context()).Result()
 	if err != nil {
 		return nil, err
 	}
@@ -43,7 +44,7 @@ func (r *redisRepository) generateKey(code string) string {
 func (r *redisRepository) Find(code string) (*shortener.Redirect, error) {
 	redirect := &shortener.Redirect{}
 	key := r.generateKey(code)
-	data, err := r.client.HGetAll(key).Result()
+	data, err := r.client.HGetAll(r.client.Context(), key).Result()
 	if err != nil {
 		return nil, errors.Wrap(err, "repository.Redirect.Find")
 	}
@@ -67,7 +68,7 @@ func (r *redisRepository) Store(redirect *shortener.Redirect) error {
 		"url":        redirect.URL,
 		"created_at": redirect.CreatedAt,
 	}
-	_, err := r.client.HMSet(key, data).Result()
+	_, err := r.client.HMSet(r.client.Context(), key, data).Result()
 	if err != nil {
 		return errors.Wrap(err, "repository.Redirect.Store")
 	}

@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/santegoeds/oanda"
+	oanda "github.com/santegoeds/oanda"
 )
 
 var (
@@ -13,14 +13,12 @@ var (
 	instrs  []string
 )
 
-type NbOandaTick struct {
-	instrs string
-	tick   string
+type Event struct{
 }
 
-type I interface {
-	M()
-}
+// type I interface {
+// 	M()
+// }
 
 func main() {
 	flag.Parse()
