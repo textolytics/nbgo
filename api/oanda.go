@@ -13,14 +13,11 @@ var (
 	instrs  []string
 )
 
-type Event struct{
-}
-
 // type I interface {
 // 	M()
 // }
 
-func main() {
+func OandaTickStream() {
 	flag.Parse()
 	if *token == "" {
 		panic("An Oanda authorization token is required")
@@ -34,8 +31,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	// List available account
 
+	// List available account
 	client.SelectAccount(oanda.Id(*account))
 
 	// List available instruments
@@ -43,7 +40,6 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	// fmt.Println(instruments)
 
 	for i := range instruments {
 		fmt.Println(i)
@@ -61,8 +57,9 @@ func main() {
 			fmt.Println("Received err:", err)
 			panic(err)
 		}
-		fmt.Println("Received tick:", instrs, tick)
-		fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
+		go fmt.Println("Received tick:", instrs, tick)
+		// fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
+
 		// tickParquet := oanda.PriceTick{
 		// 	Time:   tick.Time,
 		// 	Bid:    tick.Bid,
@@ -73,4 +70,5 @@ func main() {
 
 		// priceServer.Stop()
 	})
+
 }
