@@ -24,8 +24,8 @@ func NewEventService(eventRepo EventRepository) EventService {
 	}
 }
 
-func (r *eventService) Find(code string) (*Event, error) {
-	return r.eventRepo.Find(code)
+func (r *eventService) Find(event string) (*Event, error) {
+	return r.eventRepo.Find(event)
 }
 
 func (r *eventService) Store(event *Event) error {
