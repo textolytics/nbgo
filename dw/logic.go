@@ -2,7 +2,6 @@ package dw
 
 import (
 	"errors"
-
 	errs "github.com/pkg/errors"
 	validate "gopkg.in/go-playground/validator.v9"
 )

@@ -4,6 +4,10 @@ package dw
 type Event struct {
 }
 
+//Route to handle venue events
+type Route interface {
+}
+
 // type Event struct {
 // 	Type      string `json:"code" bson:"code" msgpack:"code"`
 // 	Body      string `json:"url" bson:"url" msgpack:"url" validate:"empty=false & format=url`
