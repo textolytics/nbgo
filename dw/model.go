@@ -1,9 +1,7 @@
-package operator
+package dw
 
+//Event to work with events
 type Event struct {
-	Type      string
-	Body      string
-	Timestamp int64
 }
 
 // type Event struct {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	api "github.com/nbgo/api"
+	api "github.com/nbgo/api/http"
 )
 
 func main() {

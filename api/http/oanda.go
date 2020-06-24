@@ -13,9 +13,6 @@ var (
 	instrs  []string
 )
 
-// type I interface {
-// 	M()
-// }
 
 func OandaTickStream() {
 	flag.Parse()
