@@ -1,12 +1,13 @@
 package main
 
 import (
-	api "github.com/nbgo/api/http"
+	api "github.com/nbgo/api"
 )
 
 func main() {
 
 	api.OandaTickStream()
+
 }
 
 //-----------------------------------OANDA_QUOTES----------------------

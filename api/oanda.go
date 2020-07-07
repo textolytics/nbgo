@@ -12,8 +12,7 @@ var (
 	account = flag.Int64("account", 3914094, "Oanda account.")
 	instrs  []string
 )
-
-
+//OandaTickStream get all quotes from route
 func OandaTickStream() {
 	flag.Parse()
 	if *token == "" {
@@ -67,5 +66,4 @@ func OandaTickStream() {
 
 		// priceServer.Stop()
 	})
-
 }
