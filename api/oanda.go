@@ -19,8 +19,15 @@ type OandaTicker struct {
 	Tick       oanda.PriceTick
 }
 
+//GetOandaTickStream for quotes stream from Oanda route
+func (t OandaTicker) GetOandaTickStream(tickerName string, tick oanda.PriceTick) {
+	t.TickerName = tickerName
+	t.Tick = tick
+	// return OandaTicker
+}
+
 //OandaTickStream get all quotes from route
-func OandaTickStream() (TickerName string, Tick oanda.PriceTick) {
+func OandaTickStream() {
 	flag.Parse()
 	if *token == "" {
 		panic("An Oanda authorization token is required")
@@ -66,8 +73,7 @@ func OandaTickStream() (TickerName string, Tick oanda.PriceTick) {
 		// func (TickerName instrs) () {
 
 		// }
-		// TickerName := instrs
-		// Tick := tick
+		OandaTicker.GetOandaTickStream(OandaTicker{}, instrs, tick)
 		// fmt.Println(TickerTime, TickerBid, TickerAsk, TickerStatus)
 
 		// }
@@ -77,5 +83,5 @@ func OandaTickStream() (TickerName string, Tick oanda.PriceTick) {
 		// return TickerName, Tick
 
 	})
-	return TickerName, Tick
+	// return TickerName, Tick
 }
