@@ -1,15 +1,13 @@
 package main
 
 import (
-	api "github.com/nbgo/api"
+	oandaApi "github.com/textolytics/nbgo/api"
 )
 
 func main() {
 
-	api.OandaTickStream()
-
+	oandaApi.OandaTickStream()
 }
-
 //-----------------------------------OANDA_QUOTES----------------------
 
 // package main

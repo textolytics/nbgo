@@ -12,8 +12,15 @@ var (
 	account = flag.Int64("account", 3914094, "Oanda account.")
 	instrs  []string
 )
+
+//OandaTicker is Oanda Price Tick
+type OandaTicker struct {
+	TickerName string
+	Tick       oanda.PriceTick
+}
+
 //OandaTickStream get all quotes from route
-func OandaTickStream() {
+func OandaTickStream() (TickerName string, Tick oanda.PriceTick) {
 	flag.Parse()
 	if *token == "" {
 		panic("An Oanda authorization token is required")
@@ -53,17 +60,22 @@ func OandaTickStream() {
 			fmt.Println("Received err:", err)
 			panic(err)
 		}
-		go fmt.Println("Received tick:", instrs, tick)
-		// fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
+		// go fmt.Println("Received tick:", instrs, tick)
+		// fmt.Printf("Received instrs type: %T | Tick type: %T \r\n ", instrs, tick)
 
-		// tickParquet := oanda.PriceTick{
-		// 	Time:   tick.Time,
-		// 	Bid:    tick.Bid,
-		// 	Ask:    tick.Ask,
-		// 	Status: tick.Status,
+		// func (TickerName instrs) () {
+
+		// }
+		// TickerName := instrs
+		// Tick := tick
+		// fmt.Println(TickerTime, TickerBid, TickerAsk, TickerStatus)
+
 		// }
 		//		writeParquetTEST(&tickParquet)
 
 		// priceServer.Stop()
+		// return TickerName, Tick
+
 	})
+	return TickerName, Tick
 }
