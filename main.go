@@ -8,6 +8,7 @@ func main() {
 
 	oandaApi.OandaTickStream()
 }
+
 //-----------------------------------OANDA_QUOTES----------------------
 
 // package main
