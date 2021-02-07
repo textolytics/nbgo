@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
@@ -9,34 +10,46 @@ import (
 	"github.com/joho/godotenv"
 )
 
-//Client ; Instruments,Stream>> Schema ;  Test
-func getPricing() (oanda *goanda.OandaConnection, accountID string) {
+func getCredentials() (key string, accountID string) {
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
-	key := os.Getenv("OANDA_API_KEY")
+	key = os.Getenv("OANDA_API_KEY")
 	accountID = os.Getenv("OANDA_ACCOUNT_ID")
-	oanda = goanda.NewConnection(accountID, key, false)
-	oandaInstruments(*oanda, accountID)
-
-	instruments := []string{"AUD_USD", "EUR_NZD"}
-	orderResponse := oanda.GetPricingForInstruments(instruments)
-	spew.Dump("%+v\n", orderResponse)
-	// fmt.Println(orderResponse)
-	return oanda, accountID
+	return key, accountID
 }
 
-func oandaInstruments(oanda goanda.OandaConnection, accountID string) (oandaInstrumentsList goanda.AccountInstruments) {
+func getClient(key string, accountID string) (oanda *goanda.OandaConnection) {
+	oanda = goanda.NewConnection(accountID, key, false)
+	return oanda
+}
 
-	oandaInstrumentsList = oanda.GetAccountInstruments(accountID)
-	spew.Dump("%+v\n", oandaInstrumentsList.Instruments)
-	// fmt.Println((oanda.GetAccountInstruments).Instruments())
+func getOandaInstrumentsDetails(oanda goanda.OandaConnection, accountID string) (oandaInstrumentsDetails goanda.AccountInstruments) {
+	oandaInstrumentsDetails = oanda.GetAccountInstruments(accountID)
+	spew.Dump("%+v\n", oandaInstrumentsDetails)
+	return oandaInstrumentsDetails
+}
 
+func getOandaInstrumentsList(oandaInstrumentsDetails goanda.AccountInstruments) (oandaInstrumentsList []string) {
+	for _, v := range oandaInstrumentsDetails.Instruments {
+		oandaInstrumentsList = append(oandaInstrumentsList, v.Name)
+		fmt.Println(v.Name)
+	}
 	return oandaInstrumentsList
 }
 
-func main() {
-	getPricing()
+//Client; Instruments,Stream>> Schema ;  Test
+func getPricing(oandaInstrumentsList []string, oanda *goanda.OandaConnection) (orderResponse goanda.Pricings) {
+	orderResponse = oanda.GetPricingForInstruments(oandaInstrumentsList)
+	return orderResponse
+}
 
+func main() {
+	token, account := getCredentials()
+	oandaClient := getClient(token, account)
+	oandaInstrumentsDetails := getOandaInstrumentsDetails(*oandaClient, account)
+	oandaInstrumentsList := getOandaInstrumentsList(oandaInstrumentsDetails)
+	orderResponse := getPricing(oandaInstrumentsList, oandaClient)
+	spew.Dump("%+v\n", orderResponse)
 }

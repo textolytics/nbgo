@@ -1,4 +1,4 @@
-package api
+package main
 
 import (
 	"flag"
@@ -9,7 +9,7 @@ import (
 
 var (
 	token   = flag.String("token", "63d484ee1bf37009848ccdb6c421ad75-bd7b55136f1ffc1c486b6bafe33d87f6", "Oanda authorization token.")
-	account = flag.Int64("account", 3914094, "Oanda account.")
+	account = flag.Int64("account", 101-004-3748257-001, "Oanda account.")
 	instrs  []string
 )
 
