@@ -52,4 +52,4 @@ builds/**/images/*
 *.xxjson
 
 # Oanda credentials
-*..env
+*.env
