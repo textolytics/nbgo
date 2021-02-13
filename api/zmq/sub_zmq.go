@@ -14,10 +14,9 @@ import (
 func SubZmq() {
 	//  Prepare our subscriber
 	subscriber, _ := zmq.NewSocket(zmq.SUB)
-	defer subscriber.Close()
-	subscriber.Connect("tcp://localhost:5563")
 	subscriber.SetSubscribe("B")
-
+	defer subscriber.Close()
+	subscriber.Connect("tcp://192.168.0.13:5563")
 	for {
 		//  Read envelope with address
 		address, _ := subscriber.Recv(0)
