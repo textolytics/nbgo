@@ -45,6 +45,11 @@ func getPricing(oandaInstrumentsList []string, oanda *goanda.OandaConnection) (o
 	return orderResponse
 }
 
+func getStreaming(oandaInstrumentsList []string, oanda *goanda.OandaConnection) (orderResponse goanda.Pricings) {
+	orderResponse = oanda.GetPricingForInstruments(oandaInstrumentsList)
+	return orderResponse
+}
+
 func main() {
 	token, account := getCredentials()
 	oandaClient := getClient(token, account)
