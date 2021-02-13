@@ -1,10 +1,14 @@
 package main
 
-import oanda "github.com/textolytics/nbgo/nbgo/api"
+import (
+	"github.com/textolytics/nbgo/api/oanda"
+	"github.com/textolytics/nbgo/api/zmq"
+)
 
 func main() {
 
 	oanda.GetOandaPricing()
+	zmq.SubZmq()
 }
 
 //-----------------------------------OANDA_QUOTES----------------------

@@ -3,10 +3,15 @@ package api
 // import (
 // 	"log"
 
-// 	"github.com/zeromq/goczmq"
+// 	goczmq "github.com/zeromq/goczmq"
 // )
 
-// func main() {
+// // import (
+// // 	"log"
+// // 	"github.com/zeromq/goczmq"
+// // )
+
+// func goczmqActor() {
 // 	// Create a router channeler and bind it to port 5555.
 // 	// A channeler provides a thread safe channel interface
 // 	// to a *Sock
