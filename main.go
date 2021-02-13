@@ -1,6 +1,6 @@
 package main
 
-import oanda "github.com/textolytics/nbgo/nbgo/api/oanda"
+import oanda "github.com/textolytics/nbgo/nbgo/api"
 
 func main() {
 
