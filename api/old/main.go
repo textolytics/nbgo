@@ -1,5 +1,4 @@
 package api
-<<<<<<< HEAD
 
 import (
 	"flag"
@@ -86,5 +85,3 @@ func OandaTickStream() {
 	})
 	// return TickerName, Tick
 }
-=======
->>>>>>> b4a9927e20e2400646effbf2980a1851d8795b54

@@ -1,4 +1,4 @@
-package main
+package api
 
 import (
 	"fmt"
@@ -11,18 +11,29 @@ import (
 )
 
 func getCredentials() (key string, accountID string) {
-	err := godotenv.Load()
+	err := godotenv.Load(os.ExpandEnv("$GOPATH/src/github.com/textolytics/nbgo/api/oanda/.env."))
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
+	keyName := ("OANDA_API_KEY")
 	key = os.Getenv("OANDA_API_KEY")
+
+	accountIDName := ("OANDA_ACCOUNT_ID")
 	accountID = os.Getenv("OANDA_ACCOUNT_ID")
+	os.Setenv(keyName, key)
+	os.Setenv(accountIDName, accountID)
+
 	return key, accountID
 }
 
 func getClient(key string, accountID string) (oanda *goanda.OandaConnection) {
-	oanda = goanda.NewConnection(accountID, key, false)
+	oanda = goanda.NewConnection(accountID, key, "api-fxpractice")
 	return oanda
+}
+
+func getStreamingClient(key string, accountID string) (oandaStream *goanda.OandaConnection) {
+	oandaStream = goanda.NewConnection(accountID, key, "stream-fxpractice")
+	return oandaStream
 }
 
 func getOandaInstrumentsDetails(oanda goanda.OandaConnection, accountID string) (oandaInstrumentsDetails goanda.AccountInstruments) {
@@ -39,17 +50,32 @@ func getOandaInstrumentsList(oandaInstrumentsDetails goanda.AccountInstruments) 
 	return oandaInstrumentsList
 }
 
-//Client; Instruments,Stream>> Schema ;  Test
+//GetPricing; Instruments,Stream>> Schema ;  Test
 func getPricing(oandaInstrumentsList []string, oanda *goanda.OandaConnection) (orderResponse goanda.Pricings) {
 	orderResponse = oanda.GetPricingForInstruments(oandaInstrumentsList)
 	return orderResponse
 }
 
-func main() {
+//GetStreaming Instruments,Stream>> Schema ;  Test
+func getStreaming(oandaInstrumentsList []string, oandaStream *goanda.OandaConnection) (streamingResponse goanda.Pricings) {
+	streamingResponse = oandaStream.GetPricingStreamForInstruments(oandaInstrumentsList)
+	return streamingResponse
+}
+
+//GetOandaPricing Instruments,Stream>> Schema ;  Test
+func GetOandaPricing() (orderResponse goanda.Pricings, streamingResponse goanda.Pricings) {
 	token, account := getCredentials()
 	oandaClient := getClient(token, account)
+	getStreamingClient := getStreamingClient(token, account)
 	oandaInstrumentsDetails := getOandaInstrumentsDetails(*oandaClient, account)
 	oandaInstrumentsList := getOandaInstrumentsList(oandaInstrumentsDetails)
-	orderResponse := getPricing(oandaInstrumentsList, oandaClient)
+	orderResponse = getPricing(oandaInstrumentsList, oandaClient)
 	spew.Dump("%+v\n", orderResponse)
+	streamingResponse = getStreaming(oandaInstrumentsList, getStreamingClient)
+	spew.Dump("%+v\n", streamingResponse)
+	return orderResponse, streamingResponse
 }
+
+// func main() {
+
+// }
