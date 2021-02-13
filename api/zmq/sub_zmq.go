@@ -7,13 +7,13 @@ package zmq
 import (
 	"fmt"
 
-	zmq4 "github.com/pebbe/zmq4"
+	zmq "github.com/pebbe/zmq4"
 )
 
 //SubZmq subscriber
 func SubZmq() (address string, contents string) {
 	//  Prepare our subscriber
-	subscriber, _ := zmq4.NewSocket(zmq4.SUB)
+	subscriber, _ := zmq.NewSocket(zmq.SUB)
 	subscriber.SetSubscribe("1")
 	// subscriber.GetEvents()
 	// defer subscriber.Close()
