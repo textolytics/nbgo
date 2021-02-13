@@ -11,7 +11,7 @@ import (
 )
 
 func getCredentials() (key string, accountID string) {
-	err := godotenv.Load(os.ExpandEnv("$GOPATH/src/github.com/textolytics/nbgo/api/oanda/.env."))
+	err := godotenv.Load(os.ExpandEnv("$GOPATH/src/github.com/textolytics/nbgo/api/oanda/.env"))
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
@@ -27,12 +27,12 @@ func getCredentials() (key string, accountID string) {
 }
 
 func getClient(key string, accountID string) (oanda *goanda.OandaConnection) {
-	oanda = goanda.NewConnection(accountID, key, "api-fxpractice")
+	oanda = goanda.NewConnection(accountID, key, false)
 	return oanda
 }
 
 func getStreamingClient(key string, accountID string) (oandaStream *goanda.OandaConnection) {
-	oandaStream = goanda.NewConnection(accountID, key, "stream-fxpractice")
+	oandaStream = goanda.NewConnection(accountID, key, false)
 	return oandaStream
 }
 
@@ -56,11 +56,11 @@ func getPricing(oandaInstrumentsList []string, oanda *goanda.OandaConnection) (o
 	return orderResponse
 }
 
-//GetStreaming Instruments,Stream>> Schema ;  Test
-func getStreaming(oandaInstrumentsList []string, oandaStream *goanda.OandaConnection) (streamingResponse goanda.Pricings) {
-	streamingResponse = oandaStream.GetPricingStreamForInstruments(oandaInstrumentsList)
-	return streamingResponse
-}
+// //GetStreaming Instruments,Stream>> Schema ;  Test
+// func getStreaming(oandaInstrumentsList []string, oandaStream *goanda.OandaConnection) (streamingResponse goanda.Pricings) {
+// 	streamingResponse = oandaStream.GetPricingStreamForInstruments(oandaInstrumentsList)
+// 	return streamingResponse
+// }
 
 //GetOandaPricing Instruments,Stream>> Schema ;  Test
 func GetOandaPricing() (orderResponse goanda.Pricings, streamingResponse goanda.Pricings) {
@@ -71,8 +71,8 @@ func GetOandaPricing() (orderResponse goanda.Pricings, streamingResponse goanda.
 	oandaInstrumentsList := getOandaInstrumentsList(oandaInstrumentsDetails)
 	orderResponse = getPricing(oandaInstrumentsList, oandaClient)
 	spew.Dump("%+v\n", orderResponse)
-	streamingResponse = getStreaming(oandaInstrumentsList, getStreamingClient)
-	spew.Dump("%+v\n", streamingResponse)
+	// streamingResponse = getStreaming(oandaInstrumentsList, getStreamingClient)
+	spew.Dump("%+v\n", getStreamingClient)
 	return orderResponse, streamingResponse
 }
 
