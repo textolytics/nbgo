@@ -8,7 +8,7 @@ import (
 func main() {
 
 	oanda.GetOandaPricing()
-	zmq.SubZmq()
+	zmq.SubKrakenTick()
 }
 
 //-----------------------------------OANDA_QUOTES----------------------
