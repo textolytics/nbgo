@@ -19,6 +19,7 @@ func main() {
 // )
 
 // var (
+
 // 	token   = flag.String("token", "5b2e1521432ad31ef69270b682394010-4df302be03bbefb18ad70e457f3db869", "Oanda authorization token.")
 // 	account = flag.Int64("account", 3914094, "Oanda account.")
 // 	instrs  []string
