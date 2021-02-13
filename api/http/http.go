@@ -1,5 +1,10 @@
+<<<<<<< HEAD:api/http.go
 package main
+=======
+package http
+>>>>>>> 655e36ec71f7d4fa8e4078fc6fff8aaeeef6a7a9:api/http/http.go
 
+//EXAMPLE HTTP FROM TENSOR-PROGRAMMING
 import (
 	"io/ioutil"
 	"log"
@@ -13,6 +18,7 @@ import (
 	"github.com/tensor-programming/hex-microservice/shortener"
 )
 
+//RedirectHandler RedirectHandler
 type RedirectHandler interface {
 	Get(http.ResponseWriter, *http.Request)
 	Post(http.ResponseWriter, *http.Request)
@@ -22,6 +28,7 @@ type handler struct {
 	redirectService shortener.RedirectService
 }
 
+//NewHandler NewHandler
 func NewHandler(redirectService shortener.RedirectService) RedirectHandler {
 	return &handler{redirectService: redirectService}
 }
