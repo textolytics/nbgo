@@ -1,4 +1,4 @@
-package dw
+package main
 
 // EventRepository - DataWarehousing
 type EventRepository interface {

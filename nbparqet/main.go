@@ -1,25 +1,25 @@
 //------------------------------------------------------------
 
-// package main
+package main
 
-// import (
-// 	"fmt"
+import (
+	"fmt"
 
-// 	"github.com/colinmarc/hdfs"
-// )
+	"github.com/colinmarc/hdfs"
+)
 
-// func main() {
+func main() {
 
-// 	client, _ := hdfs.New("hdfs://spark.nb.lan:9000")
+	client, _ := hdfs.New("hdfs://spark.nb.lan:9000")
 
-// 	file, _ := client.Open("/mobydick.txt")
+	file, _ := client.Open("/mobydick.txt")
 
-// 	buf := make([]byte, 59)
-// 	file.ReadAt(buf, 48847)
+	buf := make([]byte, 59)
+	file.ReadAt(buf, 48847)
 
-// 	fmt.Println(string(buf))
+	fmt.Println(string(buf))
 // => Abominable are the tumbler
-// }
+}
 
 //------------------------
 

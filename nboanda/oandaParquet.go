@@ -1,5 +1,4 @@
 //-----------------------------------UDP Multicast----------------------
-
 package main
 
 import (
@@ -10,8 +9,8 @@ import (
 )
 
 var (
-	token   = flag.String("token", "63d484ee1bf37009848ccdb6c421ad75-bd7b55136f1ffc1c486b6bafe33d87f6", "Oanda authorization token.")
-	account = flag.Int64("account", "101-004-3748257-001", "Oanda account.")
+	token   = flag.String("token", "979902a52f0bc5447df723a3fb94c9b1-02d41003d7bd5d5acd1fa3e6b63a4b99", "Oanda authorization token.")
+	account = flag.Int64("account", 3914094, "Oanda account.")
 	instrs  []string
 )
 
@@ -65,8 +64,8 @@ func main() {
 			// fmt.Println("Received err:", err)
 			panic(err)
 		}
-		fmt.Println("Received tick:", instrs, tick)
-		fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
+		// fmt.Println("Received tick:", instrs, tick)
+		// fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
 		// tickParquet := oanda.PriceTick{
 		// 	Time:   tick.Time,
 		// 	Bid:    tick.Bid,
@@ -77,7 +76,7 @@ func main() {
 
 		// writeParquetTEST(&tickParquet)
 
-		priceServer.Stop()
+		// priceServer.Stop()
 	})
 }
 
