@@ -1,4 +1,4 @@
-package api
+package oanda
 
 import (
 	"fmt"
@@ -11,7 +11,7 @@ import (
 )
 
 func getCredentials() (key string, accountID string) {
-	err := godotenv.Load(os.ExpandEnv("$GOPATH/src/github.com/textolytics/nbgo/api/oanda/.env"))
+	err := godotenv.Load(os.ExpandEnv("github.com/textolytics/nbgo/api/oanda/.env"))
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}

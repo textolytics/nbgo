@@ -1,10 +1,10 @@
 package main
 
-import api "github.com/textolytics/nbgo/api/oanda"
+import oanda "github.com/textolytics/nbgo/nbgo/api"
 
 func main() {
 
-	api.GetOandaPricing()
+	oanda.GetOandaPricing()
 }
 
 //-----------------------------------OANDA_QUOTES----------------------

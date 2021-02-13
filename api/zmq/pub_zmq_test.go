@@ -1,4 +1,4 @@
-package api
+package zmq
 
 // /*
 // #include "czmq.h"
