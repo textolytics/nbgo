@@ -27,7 +27,7 @@ func getCredentials() (key string, accountID string) {
 }
 
 func getClient(key string, accountID string) (oanda *goanda.OandaConnection) {
-	oanda = goanda.NewConnection(accountID, key, false)
+	oanda = goanda.NewConnection(accountID, key, "api-fxpractice")
 	return oanda
 }
 
