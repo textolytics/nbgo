@@ -27,14 +27,9 @@ func getCredentials() (key string, accountID string) {
 }
 
 func getClient(key string, accountID string) (oanda *goanda.OandaConnection) {
-	oanda = goanda.NewConnection(accountID, key, "api-fxpractice")
+	oanda = goanda.NewConnection(accountID, key, false)
 	return oanda
 }
-
-// func getStreamingClient(key string, accountID string) (oandaStream *goanda.OandaConnection) {
-// 	oandaStream = goanda.NewConnection(accountID, key, false)
-// 	return oandaStream
-// }
 
 func getOandaInstrumentsDetails(oanda goanda.OandaConnection, accountID string) (oandaInstrumentsDetails goanda.AccountInstruments) {
 	oandaInstrumentsDetails = oanda.GetAccountInstruments(accountID)
@@ -56,14 +51,8 @@ func getPricing(oandaInstrumentsList []string, oanda *goanda.OandaConnection) (o
 	return orderResponse
 }
 
-// //GetStreaming Instruments,Stream>> Schema ;  Test
-// func getStreaming(oandaInstrumentsList []string, oandaStream *goanda.OandaConnection) (streamingResponse goanda.Pricings) {
-// 	streamingResponse = oandaStream.GetPricingStreamForInstruments(oandaInstrumentsList)
-// 	return streamingResponse
-// }
-
 //GetOandaPricing Instruments,Stream>> Schema ;  Test
-func GetOandaPricing() (orderResponse goanda.Pricings, streamingResponse goanda.Pricings) {
+func GetOandaPricing() (orderResponse goanda.Pricings) {
 	token, account := getCredentials()
 	oandaClient := getClient(token, account)
 	// getStreamingClient := getStreamingClient(token, account)
@@ -73,7 +62,7 @@ func GetOandaPricing() (orderResponse goanda.Pricings, streamingResponse goanda.
 	spew.Dump("%+v\n", orderResponse)
 	// streamingResponse = getStreaming(oandaInstrumentsList, getStreamingClient)
 	// spew.Dump("%+v\n", getStreamingClient)
-	return orderResponse, streamingResponse
+	return orderResponse
 }
 
 // func main() {
