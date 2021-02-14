@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/textolytics/nbgo/api/oanda"
-	"github.com/textolytics/nbgo/api/zmq/sub"
+	"github.com/textolytics/nbgo/api/zmq"
 )
 
 func main() {
