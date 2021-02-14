@@ -1,17 +1,109 @@
-package parquet
-
+package hdfs
 
 // import (
-// 	"errors"
-// 	"reflect"
+// 	"log"
 
-// 	"github.com/xitongsys/parquet-go/Common"
-// 	"github.com/xitongsys/parquet-go/parquet"
+// 	"github.com/colinmarc/hdfs"
+// 	"github.com/xitongsys/parquet-go/reader"
+// 	"github.com/xitongsys/parquet-go/writer"
+	// "github.com/xitongsys/parquet-go-source/hdfs"
+	// "github.com/xitongsys/parquet-go/reader"
+	// "github.com/xitongsys/parquet-go/writer"
 // )
-//------------------------------------------------------------
 
-// type parketElement struct {
+// //HdfsRepository "github.com/colinmarc/hdfs"
+// type HdfsRepository struct {
+// 	client   *hdfs.Client
+// 	database string
+// 	timeout  time.Duration
 // }
+
+// Parquete struct
+// type Parquete struct {
+// }
+
+// // Student struct
+// type Student struct {
+// 	Name   string  `parquet:"name=name, type=UTF8"`
+// 	Age    int32   `parquet:"name=age, type=INT32"`
+// 	Id     int64   `parquet:"name=id, type=INT64"`
+// 	Weight float32 `parquet:"name=weight, type=FLOAT"`
+// 	Sex    bool    `parquet:"name=sex, type=BOOLEAN"`
+// }
+
+// func (parquet *parquet) Write() {
+// 	// client, _ := hdfs.New("namenode:8020")
+// 	var err error
+// 	//write
+// 	fw, err := hdfs.NewHdfsFileWriter([]string{"spark.nb.lan:9000"}, "hadoop", "/old.parquet")
+// 	if err != nil {
+// 		log.Println("Can't create hdfs file", err)
+// 		return
+// 	}
+
+// 	pw, err := writer.NewParquetWriter(fw, new(Student), 4)
+// 	if err != nil {
+// 		log.Println("Can't create parquet writer", err)
+// 		return
+// 	}
+// 	num := 100
+// 	for i := 0; i < num; i++ {
+// 		stu := Student{
+// 			Name:   "StudentName",
+// 			Age:    int32(20 + i%5),
+// 			Id:     int64(i),
+// 			Weight: float32(50.0 + float32(i)*0.1),
+// 			Sex:    bool(i%2 == 0),
+// 		}
+// 		if err = pw.Write(stu); err != nil {
+// 			log.Println("Write error", err)
+// 		}
+// 	}
+// 	if err = pw.WriteStop(); err != nil {
+// 		log.Println("WriteStop err", err)
+// 	}
+// 	log.Println("Write Finished")
+// 	fw.Close()
+
+// 	///read
+// 	fr, err := hdfs.NewHdfsFileReader([]string{"spark.nb.lan:9000"}, "hadoop", "/old.parquet")
+// 	if err != nil {
+// 		log.Println("Can't open hdfs file", err)
+// 		return
+// 	}
+// 	pr, err := reader.NewParquetReader(fr, new(Student), 4)
+// 	if err != nil {
+// 		log.Println("Can't create parquet reader", err)
+// 		return
+// 	}
+// 	num = int(pr.GetNumRows())
+// 	for i := 0; i < num; i++ {
+// 		stus := make([]Student, 1)
+// 		if err = pr.Read(&stus); err != nil {
+// 			log.Println("Read error", err)
+// 		}
+// 		log.Println(stus)
+// 	}
+// 	pr.ReadStop()
+// 	fr.Close()
+// }
+
+// func parquetAppend() {
+
+// }
+
+// func NewHDFSClient() () {
+
+// 	client, _ := hdfs.New("hdfs://spark.nb.lan:9000")
+
+// }
+
+// 	file, _ := client.Open("/mobydick.txt")
+
+// 	buf := make([]byte, 59)
+// 	file.ReadAt(buf, 48847)
+
+// 	fmt.Println(string(buf))
 
 // Bool              bool    `parquet:"name=bool, type=BOOLEAN"`
 // Int32             int32   `parquet:"name=int32, type=INT32"`

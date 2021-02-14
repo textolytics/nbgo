@@ -1,10 +1,5 @@
-<<<<<<< HEAD:api/http.go
-package main
-=======
 package http
->>>>>>> 655e36ec71f7d4fa8e4078fc6fff8aaeeef6a7a9:api/http/http.go
 
-//EXAMPLE HTTP FROM TENSOR-PROGRAMMING
 import (
 	"io/ioutil"
 	"log"

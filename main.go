@@ -34,7 +34,7 @@ func main() {
 // func main() {
 // 	flag.Parse()
 // 	if *token == "" {
-// 		panic("An Oanda authorization token is required")
+// 		panic("An Oanda authorization token is required") ddddvg ssssssb	ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddbcb
 // 	}
 
 // 	if *account == 0 {

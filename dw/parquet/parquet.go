@@ -1,84 +1,83 @@
-//-----------------------------------UDP Multicast----------------------
-package main
+package parquet
 
-import (
-	"flag"
-	"fmt"
+// import (
+// 	"flag"
+// 	"fmt"
 
-	"github.com/santegoeds/oanda"
-)
+// 	"github.com/santegoeds/oanda"
+// )
 
-var (
-	token   = flag.String("token", "979902a52f0bc5447df723a3fb94c9b1-02d41003d7bd5d5acd1fa3e6b63a4b99", "Oanda authorization token.")
-	account = flag.Int64("account", 3914094, "Oanda account.")
-	instrs  []string
-)
+// var (
+// 	token   = flag.String("token", "979902a52f0bc5447df723a3fb94c9b1-02d41003d7bd5d5acd1fa3e6b63a4b99", "Oanda authorization token.")
+// 	account = flag.Int64("account", 3914094, "Oanda account.")
+// 	instrs  []string
+// )
 
-type NbOandaTick struct {
-	instrs string
-	tick   string
-}
+// type NbOandaTick struct {
+// 	instrs string
+// 	tick   string
+// }
 
-type I interface {
-	M()
-}
+// type I interface {
+// 	M()
+// }
 
-func main() {
-	flag.Parse()
-	if *token == "" {
-		panic("An Oanda authorization token is required")
-	}
+// func main() {
+// 	flag.Parse()
+// 	if *token == "" {
+// 		panic("An Oanda authorization token is required")
+// 	}
 
-	if *account == 0 {
-		panic("An Oanda account is required")
-	}
+// 	if *account == 0 {
+// 		panic("An Oanda account is required")
+// 	}
 
-	client, err := oanda.NewFxPracticeClient(*token)
-	if err != nil {
-		panic(err)
-	}
-	// List available account
+// 	client, err := oanda.NewFxPracticeClient(*token)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	// List available account
 
-	client.SelectAccount(oanda.Id(*account))
+// 	client.SelectAccount(oanda.Id(*account))
 
-	// List available instruments
-	instruments, err := client.Instruments(nil, nil)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(instruments)
+// 	// List available instruments
+// 	instruments, err := client.Instruments(nil, nil)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	fmt.Println(instruments)
 
-	for i := range instruments {
-		fmt.Println(i)
-		instrs = append(instrs, i)
-	}
+// 	for i := range instruments {
+// 		fmt.Println(i)
+// 		instrs = append(instrs, i)
+// 	}
 
-	// Create and run a NewPriceServer server.
-	priceServer, err := client.NewPriceServer(instrs...)
-	if err != nil {
-		panic(err)
-	}
+// 	// Create and run a NewPriceServer server.
+// 	priceServer, err := client.NewPriceServer(instrs...)
+// 	if err != nil {
+// 		panic(err)
+// 	}
 
-	priceServer.ConnectAndHandle(func(instrs string, tick oanda.PriceTick) {
-		if err != nil {
-			// fmt.Println("Received err:", err)
-			panic(err)
-		}
-		// fmt.Println("Received tick:", instrs, tick)
-		// fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
-		// tickParquet := oanda.PriceTick{
-		// 	Time:   tick.Time,
-		// 	Bid:    tick.Bid,
-		// 	Ask:    tick.Ask,
-		// 	Status: tick.Status,
-		// }
-		// fmt.Println("INST:%d TICK - %d ", instr, tickParquet)
+// 	priceServer.ConnectAndHandle(func(instrs string, tick oanda.PriceTick) {
+// 		if err != nil {
+// 			// fmt.Println("Received err:", err)
+// 			panic(err)
+// 		}
+// 		// fmt.Println("Received tick:", instrs, tick)
+// 		// fmt.Printf("Received instrs type : %T tick type : %T ", instrs, tick)
+// 		// tickParquet := oanda.PriceTick{
+// 		// 	Time:   tick.Time,
+// 		// 	Bid:    tick.Bid,
+// 		// 	Ask:    tick.Ask,
+// 		// 	Status: tick.Status,
+// 		// }
+// 		// fmt.Println("INST:%d TICK - %d ", instr, tickParquet)
 
-		// writeParquetTEST(&tickParquet)
+// 		// writeParquetTEST(&tickParquet)
 
-		// priceServer.Stop()
-	})
-}
+// 		// priceServer.Stop()
+// 	})
+// }
 
 //-----------------------------------Parquet--writeNested----------------------
 

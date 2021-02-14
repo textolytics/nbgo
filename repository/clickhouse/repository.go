@@ -1,102 +1,102 @@
 package clickhouse
 
-import (
-	"database/sql"
-	"log"
-	"time"
-)
+// import (
+// 	"database/sql"
+// 	"log"
+// 	"time"
+// )
 
-type clickhouseRepository struct {
-	client *sql.DB
-}
+// type clickhouseRepository struct {
+// 	client *sql.DB
+// }
 
-func newClickhouseClient(clickhouseURL string) (client clickhouseRepository, connect *sql.DB, err error) {
-	client, connect, err = newClickhouseClient(clickhouseURL)
-	connect, err = sql.Open("clickhouse", "tcp://ch.nb.lan:9000?username=&compress=true&debug=true")
+// func newClickhouseClient(clickhouseURL string) (client clickhouseRepository, connect *sql.DB, err error) {
+// 	client, connect, err = newClickhouseClient(clickhouseURL)
+// 	connect, err = sql.Open("clickhouse", "tcp://ch.nb.lan:9000?username=&compress=true&debug=true")
 
-	// checkErr(err)
+// 	// checkErr(err)
 
-	return client, connect, err
-}
+// 	return client, connect, err
+// }
 
-//NewClickhouseRepository (clickhouseURL string)
-func NewClickhouseRepository(client *sql.DB, connect sql.DB, clickhouseURL string) (repo *clickhouseRepository, err error) {
-	repo = &clickhouseRepository{}
-	// client, connect, err = newClickhouseClient(clickhouseURL)
-	// // if err != nil {
-	// // 	return nil, errors.Wrap(err, "repository.NewClickhouseRepository")
-	// // }
-	_, err = connect.Exec(`
-		CREATE TABLE IF NOT EXISTS example (
-			country_code FixedString(2),
-			os_id        UInt8,
-			browser_id   UInt8,
-			categories   Array(Int16),
-			action_day   Date,
-			action_time  DateTime
-		) engine=Memory
-	`)
-	checkErr(err)
-	repo.client = client
-	return repo, err
-}
+// //NewClickhouseRepository (clickhouseURL string)
+// func NewClickhouseRepository(client *sql.DB, connect *sql.DB, clickhouseURL string) (client *err error) {
+// 	repo := &clickhouseRepository{}
+// 	// client, connect, err = newClickhouseClient(clickhouseURL)
+// 	// // if err != nil {
+// 	// // 	return nil, errors.Wrap(err, "repository.NewClickhouseRepository")
+// 	// // }
+// 	_, err = connect.Exec(`
+// 		CREATE TABLE IF NOT EXISTS example (
+// 			country_code FixedString(2),
+// 			os_id        UInt8,
+// 			browser_id   UInt8,
+// 			categories   Array(Int16),
+// 			action_day   Date,
+// 			action_time  DateTime
+// 		) engine=Memory
+// 	`)
+// 	checkErr(err)
+// 	repo.client = client
+// 	return err
+// }
 
-var INSERTCH = "INSERT INTO example (country_code, os_id, browser_id, categories, action_day, action_time) VALUES (?, ?, ?, ?, ?, ?)"
+// var INSERTCH = "INSERT INTO example (country_code, os_id, browser_id, categories, action_day, action_time) VALUES (?, ?, ?, ?, ?, ?)"
 
-func (r *clickhouseRepository) Store(connect sql.DB, INSERTCH string) error {
-	tx, err := connect.Begin()
-	checkErr(err)
-	stmt, err := tx.Prepare(INSERTCH)
-	checkErr(err)
+// func (r *clickhouseRepository) Store(connect sql.DB, INSERTCH string) error {
+// 	tx, err := connect.Begin()
+// 	checkErr(err)
+// 	stmt, err := tx.Prepare(INSERTCH)
+// 	checkErr(err)
 
-	for i := 0; i < 100; i++ {
-		if _, err := stmt.Exec(
-			"RU",
-			10+i,
-			100+i,
-			[]int16{1, 2, 3},
-			time.Now(),
-			time.Now(),
-		); err != nil {
-			log.Fatal(err)
-		}
-	}
-	checkErr(tx.Commit())
-	return err
-}
+// 	for i := 0; i < 100; i++ {
+// 		if _, err := stmt.Exec(
+// 			"RU",
+// 			10+i,
+// 			100+i,
+// 			[]int16{1, 2, 3},
+// 			time.Now(),
+// 			time.Now(),
+// 		); err != nil {
+// 			log.Fatal(err)
+// 		}
+// 	}
+// 	checkErr(tx.Commit())
+// 	return err
+// }
 
-//SELECTCH sdsdfsdf
-var SELECTCH = "SELECT country_code, os_id, browser_id, categories, action_day, action_time FROM example"
+// //SELECTCH sdsdfsdf
+// var SELECTCH = "SELECT country_code, os_id, browser_id, categories, action_day, action_time FROM example"
 
-func (r *clickhouseRepository) Find(connect *sql.DB, SELECTCH string) (rows *sql.Rows, err error) {
-	rows, err = connect.Query(SELECTCH)
-	checkErr(err)
-	for rows.Next() {
-		var (
-			country               string
-			os, browser           uint8
-			categories            []int16
-			actionDay, actionTime time.Time
-		)
-		checkErr(rows.Scan(&country, &os, &browser, &categories, &actionDay, &actionTime))
-		log.Printf("country: %s, os: %d, browser: %d, categories: %v, action_day: %s, action_time: %s", country, os, browser, categories, actionDay, actionTime)
-	}
-	return rows, err
-}
+// func (r *clickhouseRepository) Find(connect *sql.DB, SELECTCH string) (rows *sql.Rows, err error) {
+// 	rows, err = connect.Query(SELECTCH)
+// 	checkErr(err)
+// 	for rows.Next() {
+// 		var (
+// 			country               string
+// 			os, browser           uint8
+// 			categories            []int16
+// 			actionDay, actionTime time.Time
+// 		)
+// 		checkErr(rows.Scan(&country, &os, &browser, &categories, &actionDay, &actionTime))
+// 		log.Printf("country: %s, os: %d, browser: %d, categories: %v, action_day: %s, action_time: %s", country, os, browser, categories, actionDay, actionTime)
+// 	}
+// 	return rows, err
+// }
 
-func (r *clickhouseRepository) DROP(connect *sql.DB, input string) (err error) {
+// func (r *clickhouseRepository) DROP(connect *sql.DB, input string) (err error) {
 
-	if _, err := connect.Exec("DROP TABLE example"); err != nil {
-		log.Fatal(err)
-	}
-	return err
-}
+// 	if _, err := connect.Exec("DROP TABLE example"); err != nil {
+// 		log.Fatal(err)
+// 	}
+// 	return err
+// }
 
-func checkErr(err error) {
-	if err != nil {
-		log.Fatal(err)
-	}
-}
+// func checkErr(err error) {
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+// }
 
 // func newClickhouseClient(clickhouseURL string) (connect *sql.DB, err error) {
 // 	connect, err = sql.Open("clickhouse", "tcp://ch.nb.lan:9000?username=&compress=true&debug=true")

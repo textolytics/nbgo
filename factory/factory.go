@@ -107,8 +107,9 @@ func (sql sqlite) GetData(query string) string {
 	return sql.database[query]
 }
 
-func (zmq zmq) SendMessage(message string, data string) {
-	zmq.agent[message] = data
+func (zmq *zmq) SendMessage(header string, body string) {
+	// zmq.agent[message] = data
+	zmq.agent[header] = body
 
 }
 
