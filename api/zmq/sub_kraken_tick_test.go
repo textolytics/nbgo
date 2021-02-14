@@ -8,8 +8,6 @@ import (
 	"testing"
 
 	zmq "github.com/pebbe/zmq4"
-
-	"fmt"
 )
 
 //SubKrakenTick PAt Subs
@@ -25,8 +23,8 @@ func TestSubKrakenTick(t *testing.T) {
 		address, _ := subscriber.Recv(0)
 		//  Read message contents
 		contents, _ := subscriber.Recv(0)
-		fmt.Printf("[%s] %s\n", address, contents)
-		t.Error(contents)
+		// fmt.Printf("[%s] %s\n", address, contents)
+		t.Error(address, contents)
 	}
 
 }

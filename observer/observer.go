@@ -7,14 +7,15 @@ import (
 )
 
 type (
+	// Event struct
 	Event struct {
 		data int
 	}
-
+	// Observer interface
 	Observer interface {
 		NotifyCallback(Event)
 	}
-
+	// Subject interface
 	Subject interface {
 		AddListener(Observer)
 		RemoveListener(Observer)
