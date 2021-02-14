@@ -10,14 +10,17 @@ import (
 )
 
 var (
+	//ErrRedirectNotFound sdsdsd
 	ErrRedirectNotFound = errors.New("Redirect Not Found")
-	ErrRedirectInvalid  = errors.New("Redirect Invalid")
+	//ErrRedirectInvalid sdsds
+	ErrRedirectInvalid = errors.New("Redirect Invalid")
 )
 
 type redirectService struct {
 	redirectRepo RedirectRepository
 }
 
+//NewRedirectService (redirectRepo RedirectRepository) RedirectService
 func NewRedirectService(redirectRepo RedirectRepository) RedirectService {
 	return &redirectService{
 		redirectRepo,
