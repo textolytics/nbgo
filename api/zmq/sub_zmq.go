@@ -13,7 +13,7 @@ import (
 //SubZmq subscriber
 func SubZmq() (address string, contents string) {
 	//  Prepare our subscriber
-	subscriber, _ := zmq.NewSocket(zmq.SUB)
+	subscriber, _ := zmq.NewSocket(zmq.Type(6))
 	subscriber.SetSubscribe("1")
 	// subscriber.GetEvents()
 	// defer subscriber.Close()
