@@ -13,7 +13,7 @@ import (
 //SubKrakenTick PAt Subs
 func TestSubKrakenTick(t *testing.T) {
 	//  Prepare our subscriber
-	subscriber, _ := zmq.NewSocket(zmq.SUB)
+	subscriber, _ := zmq.NewSocket(zmq.Type(6))
 	defer subscriber.Close()
 	subscriber.Connect("tcp://zmq.nb.lan:5558")
 	subscriber.SetSubscribe("")
