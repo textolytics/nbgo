@@ -9,7 +9,7 @@ func main() {
 
 	oanda.GetOandaPricing()
 	zmq.SubKrakenTick()
-	
+
 	// oandav20.Oandav20Stream()
 }
 
