@@ -2,7 +2,7 @@
 //  Subscriber
 //
 
-package zmq
+package sub
 
 import (
 	"fmt"
@@ -11,14 +11,12 @@ import (
 )
 
 //SubZmq subscriber
-func SubZmq() (address string, contents string) {
+func SubZmq() {
 	//  Prepare our subscriber
-	subscriber, _ := zmq.NewSocket(zmq.Type(6))
-	subscriber.SetSubscribe("1")
-	// subscriber.GetEvents()
+	subscriber, _ := zmq.NewSocket(zmq.SUB)
 	// defer subscriber.Close()
-	subscriber.Connect("tcp://192.168.0.13:5558")
-	fmt.Printf("[%s] %s\n", subscriber, subscriber)
+	subscriber.Connect("tcp://zmq.nb.lan:5558")
+	subscriber.SetSubscribe("")
 	for {
 		//  Read envelope with address
 		address, _ := subscriber.Recv(0)
@@ -27,7 +25,7 @@ func SubZmq() (address string, contents string) {
 
 		fmt.Printf("[%s] %s\n", address, contents)
 		// spew.Dump("%+v\n", contents)
-		return address, contents
+		// return address, contents
 
 	}
 }

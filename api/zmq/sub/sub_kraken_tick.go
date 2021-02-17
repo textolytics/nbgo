@@ -2,7 +2,7 @@
 //  Pubsub envelope subscriber.
 //
 
-package zmq
+package sub
 
 import (
 	zmq "github.com/pebbe/zmq4"
@@ -10,12 +10,12 @@ import (
 	"fmt"
 )
 
-//SubKrakenTick PAt Subs
+//SubKrakenTick subscriber
 func SubKrakenTick() {
 	//  Prepare our subscriber
-	subscriber, _ := zmq.NewSocket(zmq.Type(6))
-	defer subscriber.Close()
-	subscriber.Connect("tcp://zmq.nb.lan:5558")
+	subscriber, _ := zmq.NewSocket(zmq.SUB)
+	// defer subscriber.Close()
+	subscriber.Connect("tcp://zmq.nb.lan:5560")
 	subscriber.SetSubscribe("")
 
 	for {
