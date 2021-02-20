@@ -2,7 +2,7 @@
 //  Pubsub envelope subscriber.
 //
 
-package sub
+package zmq
 
 import (
 	"testing"
