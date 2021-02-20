@@ -1,3 +1,3 @@
 # Phase III
 
-GPU-accelerated Message Bus
+GPU-accelerated Event Actor Bus
