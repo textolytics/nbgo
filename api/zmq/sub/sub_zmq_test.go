@@ -1,4 +1,4 @@
-package zmq
+package sub
 
 // /*
 // #include "czmq.h"

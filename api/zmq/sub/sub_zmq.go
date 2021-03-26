@@ -2,7 +2,7 @@
 //  Subscriber
 //
 
-package zmq
+package sub
 
 import (
 	"fmt"

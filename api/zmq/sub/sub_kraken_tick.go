@@ -2,7 +2,7 @@
 //  Pubsub envelope subscriber.
 //
 
-package zmq
+package sub
 
 import (
 	"fmt"

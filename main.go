@@ -2,13 +2,12 @@ package main
 
 import (
 	"github.com/textolytics/nbgo/api/oanda"
-	sub "github.com/textolytics/nbgo/api/zmq/sub"
+	"github.com/textolytics/nbgo/api/zmq/sub"
 )
 
 func main() {
-
 	oanda.GetOandaPricing()
-	go sub.SubZmq()
+	// go sub.SubZmq()
 	sub.SubKrakenTick()
 	// oandav20.Oandav20Stream()
 }
