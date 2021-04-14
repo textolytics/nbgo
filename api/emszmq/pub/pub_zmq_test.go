@@ -1,4 +1,4 @@
-package zmq
+package emszmq
 
 // /*
 // #include "czmq.h"

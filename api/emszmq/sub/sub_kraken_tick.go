@@ -2,12 +2,12 @@
 //  Pubsub envelope subscriber.
 //
 
-package sub
+package emszmq
 
 import (
 	"fmt"
 
-	"github.com/pebbe/zmq4"
+	"github.com/go-zeromq/zmq4"
 )
 
 //SubKrakenTick subscriber
