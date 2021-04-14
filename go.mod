@@ -7,10 +7,7 @@ require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/go-chi/chi v4.0.2+incompatible
 	github.com/go-playground/universal-translator v0.17.0 // indirect
-	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/joho/godotenv v1.3.0
-	github.com/onsi/ginkgo v1.16.1 // indirect
-	github.com/onsi/gomega v1.11.0 // indirect
 	github.com/pebbe/zmq4 v1.2.7
 	github.com/pkg/errors v0.9.1
 	github.com/tensor-programming/hex-microservice v0.0.0-20191024074311-1ffbdc8a3813
