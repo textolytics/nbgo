@@ -1,16 +1,54 @@
 package main
 
 import (
-	"github.com/textolytics/nbgo/api/emszmq"
+	sub "github.com/textolytics/nbgo/api/emszmqpb"
 	"github.com/textolytics/nbgo/api/oanda"
 )
 
 func main() {
-	oanda.GetOandaPricing()
-	// go sub.SubZmq()
-	emszmq.SubZmqTick()
+	go oanda.GetOandaPricing()
+	go sub.SubZmqDepth()
+	go sub.SubZmqEURUSDTick()
+	go sub.SubZmqEURUSDDepth()
+	sub.SubZmqTick()
 	// oandav20.Oandav20Stream()
 }
+
+// import (
+// 	"fmt"
+
+// 	// "github.com/textolytics/nbgo/api/oanda"
+// 	"github.com/santegoeds/oanda"
+// )
+
+// func main() {
+// 	// oanda.GetOandaPricing()
+// 	// go sub.SubZmq()
+// 	// emszmq.SubZmqTick()
+// 	// oandav20.Oandav20Stream()
+
+// 	client, err := oanda.NewFxPracticeClient("63d484ee1bf37009848ccdb6c421ad75-bd7b55136f1ffc1c486b6bafe33d87f6")
+// 	if err != nil {
+// 		panic(err)
+// 	}
+
+// 	// List available instruments
+// 	instruments, err := client.Instruments(nil, nil)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	fmt.Println(instruments)
+// 	// Create and run a price server.
+// 	priceServer, err := client.NewPriceServer("eur_usd")
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	priceServer.ConnectAndHandle(func(instrument string, tick oanda.PriceTick) {
+// 		fmt.Println("Received tick:", instrument, tick)
+// 		priceServer.Stop()
+// 	})
+
+// }
 
 //-----------------------------------OANDA_QUOTES----------------------
 

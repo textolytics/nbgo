@@ -5,39 +5,39 @@
 // PubSub envelope subscriber
 package emszmq
 
-import (
-	"context"
-	"log"
+// import (
+// 	"context"
+// 	"log"
 
-	"github.com/go-zeromq/zmq4"
-)
+// 	"github.com/go-zeromq/zmq4"
+// )
 
-func SubZmqTick() {
-	log.SetPrefix("psenvsub: ")
+// func SubZmqTick() {
+// 	log.SetPrefix("psenvsub: ")
 
-	//  Prepare our subscriber
-	sub := zmq4.NewSub(context.Background())
-	defer sub.Close()
+// 	//  Prepare our subscriber
+// 	sub := zmq4.NewSub(context.Background())
+// 	defer sub.Close()
 
-	err := sub.Dial("tcp://zmq.nb.lan:5558")
-	if err != nil {
-		log.Fatalf("could not dial: %v", err)
-	}
+// 	err := sub.Dial("tcp://zmq.nb.lan:5558")
+// 	if err != nil {
+// 		log.Fatalf("could not dial: %v", err)
+// 	}
 
-	err = sub.SetOption(zmq4.OptionSubscribe, "")
-	if err != nil {
-		log.Fatalf("could not subscribe: %v", err)
-	}
+// 	err = sub.SetOption(zmq4.OptionSubscribe, "")
+// 	if err != nil {
+// 		log.Fatalf("could not subscribe: %v", err)
+// 	}
 
-	for {
-		// Read envelope
-		msg, err := sub.Recv()
-		if err != nil {
-			log.Fatalf("could not receive message: %v", err)
-		}
-		log.Printf("[%s] %s\n", msg.Frames[0], msg.Frames[1])
-	}
-}
+// 	for {
+// 		// Read envelope
+// 		msg, err := sub.Recv()
+// 		if err != nil {
+// 			log.Fatalf("could not receive message: %v", err)
+// 		}
+// 		log.Printf("[%s] %s\n", msg.Frames[0], msg.Frames[1])
+// 	}
+// }
 
 // import (
 // 	"fmt"
