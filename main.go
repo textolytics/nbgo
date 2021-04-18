@@ -1,16 +1,16 @@
 package main
 
 import (
-	sub "github.com/textolytics/nbgo/api/emszmqpb"
+	emszmqpbsub "github.com/textolytics/nbgo/api/emszmqpb"
 	"github.com/textolytics/nbgo/api/oanda"
 )
 
 func main() {
-	go oanda.GetOandaPricing()
-	go sub.SubZmqDepth()
-	go sub.SubZmqEURUSDTick()
-	go sub.SubZmqEURUSDDepth()
-	sub.SubZmqTick()
+	oanda.GetOandaPricing()
+	emszmqpbsub.SubZmqTick()
+	emszmqpbsub.SubZmqDepth()
+	emszmqpbsub.SubZmqEURUSDTick()
+	emszmqpbsub.SubZmqEURUSDDepth()
 	// oandav20.Oandav20Stream()
 }
 
