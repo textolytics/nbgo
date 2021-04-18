@@ -3,13 +3,17 @@ package main
 import (
 	emszmqpbsub "github.com/textolytics/nbgo/api/emszmqpb"
 	"github.com/textolytics/nbgo/api/oanda"
+	"github.com/textolytics/nbgo/dw/clickhouse"
+	"github.com/textolytics/nbgo/factory/actor"
 )
 
 func main() {
-	oanda.GetOandaPricing()
-	emszmqpbsub.SubZmqTick()
-	emszmqpbsub.SubZmqDepth()
-	emszmqpbsub.SubZmqEURUSDTick()
+	go clickhouse.ClickHouseDWClient()
+	go oanda.GetOandaPricing()
+	go actor.Zmq4pbAsyncsrv()
+	go emszmqpbsub.SubZmqTick()
+	go emszmqpbsub.SubZmqDepth()
+	go emszmqpbsub.SubZmqEURUSDTick()
 	emszmqpbsub.SubZmqEURUSDDepth()
 	// oandav20.Oandav20Stream()
 }

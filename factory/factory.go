@@ -1,6 +1,10 @@
 package factory
 
-import "fmt"
+import (
+	"fmt"
+
+	factoryZmq4 "github.com/pebbe/zmq4"
+)
 
 type (
 	file struct {
@@ -30,7 +34,7 @@ type (
 	}
 
 	zmq struct {
-		agent map[string]string
+		data map[string]string
 	}
 
 	clickhouse struct {
@@ -43,6 +47,14 @@ type (
 
 	sqlite struct {
 		database map[string]string
+	}
+
+	// Zmq4pbSubscriber XPUBXSUB
+	Zmq4pbSubscriber struct {
+		GetSubscribersMap map[string][]string
+		GetSubscriber     *factoryZmq4.Socket
+		SetSubscribersMap map[string][]string
+		SetSubscriber     error
 	}
 
 	//FileSystem interface
@@ -72,13 +84,13 @@ type (
 	Factory func(string) interface{}
 )
 
-func (zmq zmq) ReceiveMessage(topic string) string {
-	if _, ok := zmq.agent[topic]; !ok {
-		return ""
-	}
-	fmt.Println("ZMQ")
-	return zmq.agent[topic]
-}
+// func (zmq zmq) ReceiveMessage(topic string) string {
+// 	if _, ok := zmq.agent[topic]; !ok {
+// 		return ""
+// 	}
+// 	fmt.Println("ZMQ")
+// 	return
+// }
 
 func (clh clickhouse) GetData(query string) string {
 	if _, ok := clh.database[query]; !ok {
@@ -107,11 +119,11 @@ func (sql sqlite) GetData(query string) string {
 	return sql.database[query]
 }
 
-func (zmq *zmq) SendMessage(header string, body string) {
-	// zmq.agent[message] = data
-	zmq.agent[header] = body
+// func (zmq *zmq) SendMessage(header string, body string) {
+// 	// zmq.agent[message] = data
+// 	zmq.agent[header] = body
 
-}
+// }
 
 func (mdb mongoDB) PutData(query string, data string) {
 	mdb.database[query] = data
@@ -183,48 +195,48 @@ func FilesystemFactory(env string) interface{} {
 	}
 }
 
-//MessageBusFactory (env string) interface{}
-func MessageBusFactory(env string) interface{} {
-	switch env {
-	case "production":
-		return zmq{
-			agent: make(map[string]string),
-		}
-	case "development":
-		return zmq{
-			agent: make(map[string]string),
-		}
-	default:
-		return nil
-	}
-}
+// //MessageBusFactory (env string) interface{}
+// func MessageBusFactory(env string) interface{} {
+// 	switch env {
+// 	case "production":
+// 		return zmq{
+// 			agent: make(map[string]string),
+// 		}
+// 	case "development":
+// 		return zmq{
+// 			agent: make(map[string]string),
+// 		}
+// 	default:
+// 		return nil
+// 	}
+// }
 
-//DatabaseFactory (env string) interface{}
-func DatabaseFactory(env string) interface{} {
-	switch env {
-	case "production":
-		return mongoDB{
-			database: make(map[string]string),
-		}
-	case "development":
-		return sqlite{
-			database: make(map[string]string),
-		}
-	default:
-		return nil
-	}
-}
+// //DatabaseFactory (env string) interface{}
+// func DatabaseFactory(env string) interface{} {
+// 	switch env {
+// 	case "production":
+// 		return mongoDB{
+// 			database: make(map[string]string),
+// 		}
+// 	case "development":
+// 		return sqlite{
+// 			database: make(map[string]string),
+// 		}
+// 	default:
+// 		return nil
+// 	}
+// }
 
-//AbstractFactory (fact string) Factory
-func AbstractFactory(fact string) Factory {
-	switch fact {
-	case "database":
-		return DatabaseFactory
-	case "filesystem":
-		return FilesystemFactory
-	case "messagebus":
-		return MessageBusFactory
-	default:
-		return nil
-	}
-}
+// //AbstractFactory (fact string) Factory
+// func AbstractFactory(fact string) Factory {
+// 	switch fact {
+// 	case "database":
+// 		return DatabaseFactory
+// 	case "filesystem":
+// 		return FilesystemFactory
+// 	case "messagebus":
+// 		return MessageBusFactory
+// 	default:
+// 		return nil
+// 	}
+// }

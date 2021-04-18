@@ -3,6 +3,7 @@ module github.com/textolytics/nbgo
 go 1.16
 
 require (
+	github.com/ClickHouse/clickhouse-go v1.4.3 // indirect
 	github.com/awoldes/goanda v0.0.0-20200726232704-9c9fe180abd2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/go-chi/chi v4.0.2+incompatible
