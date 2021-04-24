@@ -11,7 +11,7 @@ import (
 )
 
 func getCredentials() (key string, accountID string) {
-	err := godotenv.Load(os.ExpandEnv("$GOPATH/src/github.com/textolytics/nbgo/api/nboanda/.env"))
+	err := godotenv.Load(os.ExpandEnv("$GOPATH/src/github.com/textolytics/nbgo/nbapi/nboanda/.env"))
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}

@@ -10,10 +10,10 @@ func main() {
 	// go clickhouse.ClickHouseDWClient()
 	go nboanda.GetOandaPricing()
 	// go actor.Zmq4pbAsyncsrv()
-	// go emszmqpbsub.SubZmqTick()
-	emszmqpbsub.SubZmqDepth()
-	// go emszmqpbsub.SubZmqEURUSDTick()
-	// go emszmqpbsub.SubZmqEURUSDDepth()
+	go emszmqpbsub.SubZmqTick()
+	go emszmqpbsub.SubZmqDepth()
+	go emszmqpbsub.SubZmqEURUSDTick()
+	emszmqpbsub.SubZmqEURUSDDepth()
 	// oandav20.Oandav20Stream()
 }
 
