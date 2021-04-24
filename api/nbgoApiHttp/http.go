@@ -1,4 +1,4 @@
-package http
+package nbgoApiHttp
 
 import (
 	"io/ioutil"

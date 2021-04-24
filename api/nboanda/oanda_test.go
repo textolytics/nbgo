@@ -1,4 +1,4 @@
-package oanda
+package nboanda
 
 import (
 	"log"
