@@ -1,4 +1,4 @@
-package dw
+package nbdw
 
 //RedirectService dwindows 10 built dools
 type DwService interface {

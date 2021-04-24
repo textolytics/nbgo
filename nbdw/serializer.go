@@ -1,4 +1,4 @@
-package dw
+package nbdw
 
 //DataWarehouseDataFrame interface {
 type DataWarehouseDataFrameSerializer interface {

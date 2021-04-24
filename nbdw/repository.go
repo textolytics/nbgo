@@ -1,4 +1,4 @@
-package dw
+package nbdw
 
 // DataframeRepository interface {
 type DataWarehouseDataFrameRepository interface {

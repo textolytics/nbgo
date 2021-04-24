@@ -1,4 +1,4 @@
-package dw
+package nbdw
 
 // DataWarehouseDataFrame
 type DataWarehouseDataFrame struct {
