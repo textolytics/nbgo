@@ -158,25 +158,25 @@ func MultipleSubPoller() {
 				//  Process weather update
 				dwclickhouse.ClickHouseDWClientInsert(dwclickhouseClient, string(`subKrakenTick`), string(update))
 				fmt.Println("Got SubKrakenTick update: ", update)
-				break
+
 			case subscriberSubKrakenDepth:
 				update, _ := s.Recv(0)
 				//  Process weather update
 				dwclickhouse.ClickHouseDWClientInsert(dwclickhouseClient, string(`subKrakenDepth`), string(update))
 				fmt.Println("Got SubKrakenDepth update: ", update)
-				break
+
 			case subscriberSubKrakenEURUSDTick:
 				update, _ := s.Recv(0)
 				//  Process weather update
 				dwclickhouse.ClickHouseDWClientInsert(dwclickhouseClient, string(`subKrakenEURUSDTick`), string(update))
 				fmt.Println("Got SubKrakenEURUSDTick update: ", update)
-				break
+
 			case subscriberSubKrakenEURUSDDepth:
 				update, _ := s.Recv(0)
 				//  Process weather update
 				dwclickhouse.ClickHouseDWClientInsert(dwclickhouseClient, "subKrakenEURUSDDepth", string(update))
 				fmt.Println("Got SubKrakenEURUSDDepth update: ", update)
-				break
+
 			}
 		}
 	}
