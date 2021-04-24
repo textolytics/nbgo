@@ -1,4 +1,4 @@
-package clickhouse
+package dwclickhouse
 
 import (
 	"database/sql/driver"
@@ -42,12 +42,9 @@ func ClickHouseDWClient() {
 		if err != nil {
 			log.Fatal(err)
 		}
-
 		blocks := []*ClickHouseDwData.Block{block, block.Copy()}
-
 		var wg sync.WaitGroup
 		wg.Add(len(blocks))
-
 		for i := range blocks {
 			b := blocks[i]
 			go func() {
@@ -58,9 +55,7 @@ func ClickHouseDWClient() {
 				}
 			}()
 		}
-
 		wg.Wait()
-
 		if err := connect.Commit(); err != nil {
 			log.Fatal(err)
 		}

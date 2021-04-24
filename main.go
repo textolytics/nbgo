@@ -3,11 +3,12 @@ package main
 import (
 	emszmqpbsub "github.com/textolytics/nbgo/nbapi/emszmqpb"
 	"github.com/textolytics/nbgo/nbapi/nboanda"
+	"github.com/textolytics/nbgo/nbdw/dwclickhouse"
 )
 
 func main() {
 
-	// go clickhouse.ClickHouseDWClient()
+	go dwclickhouse.ClickHouseDWClient()
 	go nboanda.GetOandaPricing()
 	// go actor.Zmq4pbAsyncsrv()
 	go emszmqpbsub.SubZmqTick()

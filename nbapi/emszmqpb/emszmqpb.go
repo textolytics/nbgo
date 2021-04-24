@@ -3,6 +3,7 @@ package emszmqpb
 import (
 	"fmt"
 
+	"github.com/davecgh/go-spew/spew"
 	emszmqpb "github.com/pebbe/zmq4"
 )
 
@@ -15,11 +16,11 @@ func SubZmqTick() {
 	subscriber.SetSubscribe("")
 	for {
 		//  Read envelope with address
-		address, _ := subscriber.Recv(0)
+		// address, _ := subscriber.Recv(0)
 		//  Read message contents
 		contents, _ := subscriber.Recv(0)
-		fmt.Printf("[%s] %s\n", address, contents)
-		// spew.Dump("%+v\n", contents)
+		// fmt.Printf("[%s] %s\n", address, contents)
+		spew.Dump("%+v\n", contents)
 		// return address, contents
 	}
 }
@@ -38,11 +39,11 @@ func SubZmqDepth() {
 	subscriber.SetSubscribe("")
 	for {
 		//  Read envelope with address
-		address, _ := subscriber.Recv(0)
+		// address, _ := subscriber.Recv(0)
 		//  Read message contents
 		contents, _ := subscriber.Recv(0)
-		fmt.Printf("[%s] %s\n", address, contents)
-		// spew.Dump("%+v\n", contents)
+		// fmt.Printf("%s\n", contents)
+		spew.Dump("%+v\n", contents)
 		// return address, contents
 	}
 }
@@ -56,11 +57,11 @@ func SubZmqEURUSDTick() {
 	subscriber.SetSubscribe("")
 	for {
 		//  Read envelope with address
-		address, _ := subscriber.Recv(0)
+		// address, _ := subscriber.Recv(0)
 		//  Read message contents
 		contents, _ := subscriber.Recv(0)
-		fmt.Printf("[%s] %s\n", address, contents)
-		// spew.Dump("%+v\n", contents)
+		// fmt.Printf("[%s] %s\n", address, contents)
+		spew.Dump("%+v\n", contents)
 		// return address, contents
 	}
 }
@@ -74,11 +75,11 @@ func SubZmqEURUSDDepth() {
 	subscriber.SetSubscribe("")
 	for {
 		//  Read envelope with address
-		address, _ := subscriber.Recv(0)
+		// address, _ := subscriber.Recv(0)
 		//  Read message contents
 		contents, _ := subscriber.Recv(0)
-		fmt.Printf("[%s] %s\n", address, contents)
-		// spew.Dump("%+v\n", contents)
+		// fmt.Printf("[%s] %s\n", address, contents)
+		spew.Dump("%+v\n", contents)
 		// return address, contents
 	}
 }
