@@ -3,18 +3,18 @@ package main
 import (
 	emszmqpbsub "github.com/textolytics/nbgo/nbapi/emszmqpb"
 	"github.com/textolytics/nbgo/nbapi/nboanda"
-	"github.com/textolytics/nbgo/nbdw/dwclickhouse"
 )
 
 func main() {
-
-	go dwclickhouse.ClickHouseDWClient()
-	go nboanda.GetOandaPricing()
+	// go dwclickhouse.ClickHouseDWClient()
 	// go actor.Zmq4pbAsyncsrv()
-	go emszmqpbsub.SubZmqTick()
-	go emszmqpbsub.SubZmqDepth()
-	go emszmqpbsub.SubZmqEURUSDTick()
-	emszmqpbsub.SubZmqEURUSDDepth()
+	go emszmqpbsub.MultipleSubPoller()
+	go nboanda.GetOandaPricing()
+	go emszmqpbsub.SubKrakenDepth()
+	go emszmqpbsub.SubKrakenEURUSDTick()
+	go emszmqpbsub.SubKrakenEURUSDDepth()
+	emszmqpbsub.SubKrakenTick()
+
 	// oandav20.Oandav20Stream()
 }
 
