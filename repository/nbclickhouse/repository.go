@@ -1,4 +1,4 @@
-package clickhouse
+package nbclickhouse
 
 import (
 	"database/sql"

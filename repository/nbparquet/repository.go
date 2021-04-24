@@ -1,5 +1,4 @@
-package parquet
-
+package nbparquet
 
 // import (
 // 	"errors"
