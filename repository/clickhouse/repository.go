@@ -1,23 +1,21 @@
 package clickhouse
 
-// import (
-// 	"database/sql"
-// 	"log"
-// 	"time"
-// )
+import (
+	"database/sql"
+)
 
-// type clickhouseRepository struct {
-// 	client *sql.DB
-// }
+type clickhouseRepository struct {
+	client *sql.DB
+}
 
-// func newClickhouseClient(clickhouseURL string) (client clickhouseRepository, connect *sql.DB, err error) {
-// 	client, connect, err = newClickhouseClient(clickhouseURL)
-// 	connect, err = sql.Open("clickhouse", "tcp://ch.nb.lan:9000?username=&compress=true&debug=true")
+func newClickhouseClient(clickhouseURL string) (client clickhouseRepository, connect *sql.DB, err error) {
+	client, connect, err = newClickhouseClient(clickhouseURL)
+	connect, err = sql.Open("clickhouse", "tcp://ch.nb.lan:9000?username=default#&compress=true&debug=true")
 
-// 	// checkErr(err)
+	// checkErr(err)
 
-// 	return client, connect, err
-// }
+	return client, connect, err
+}
 
 // //NewClickhouseRepository (clickhouseURL string)
 // func NewClickhouseRepository(client *sql.DB, connect *sql.DB, clickhouseURL string) (client *err error) {

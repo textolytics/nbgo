@@ -59,7 +59,8 @@ func GetOandaPricing() (orderResponse goanda.Pricings) {
 	oandaInstrumentsDetails := getOandaInstrumentsDetails(*oandaClient, account)
 	oandaInstrumentsList := getOandaInstrumentsList(oandaInstrumentsDetails)
 	orderResponse = getPricing(oandaInstrumentsList, oandaClient)
-	spew.Dump("%+v\n", orderResponse)
+	fmt.Println(orderResponse.Prices)
+	// spew.Dump("%+v\n", orderResponse)
 	// streamingResponse = getStreaming(oandaInstrumentsList, getStreamingClient)
 	// spew.Dump("%+v\n", getStreamingClient)
 	return orderResponse

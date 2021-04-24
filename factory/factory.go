@@ -49,6 +49,12 @@ type (
 		database map[string]string
 	}
 
+	KrakenDepth struct {
+		Error  []interface{} `json:"error"`
+		Result struct {
+		} `json:"result"`
+	}
+
 	// Zmq4pbSubscriber XPUBXSUB
 	Zmq4pbSubscriber struct {
 		GetSubscribersMap map[string][]string

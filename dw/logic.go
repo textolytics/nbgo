@@ -2,50 +2,39 @@ package dw
 
 import (
 	"errors"
-	"time"
 
 	errs "github.com/pkg/errors"
-	"github.com/teris-io/shortid"
 	validate "gopkg.in/go-playground/validator.v9"
 )
 
 var (
 	//ErrRedirectNotFound sdsdsd
-	ErrRedirectNotFound = errors.New("Redirect Not Found")
+	ErrRedirectNotFound = errors.New("DataWarehouseDataFrame Not Found")
 	//ErrRedirectInvalid sdsds
-	ErrRedirectInvalid = errors.New("Redirect Invalid")
+	ErrRedirectInvalid = errors.New("DataWarehouseDataFrame Invalid")
 )
 
-type redirectService struct {
-	redirectRepo RedirectRepository
+type dwService struct {
+	dataWarehouseDataFrameRepository DataWarehouseDataFrameRepository
 }
 
 //NewRedirectService (redirectRepo RedirectRepository) RedirectService
-func NewRedirectService(redirectRepo RedirectRepository) RedirectService {
-	return &redirectService{
-		redirectRepo,
+func NewDwService(dataWarehouseDataFrameRepository DataWarehouseDataFrameRepository) DwService {
+	return &dwService{
+		dataWarehouseDataFrameRepository,
 	}
 }
 
-func (r *redirectService) Find(code string) (*Redirect, error) {
-	return r.redirectRepo.Find(code)
+func (d *dwService) Find(code string) (*DataWarehouseDataFrame, error) {
+	return d.dataWarehouseDataFrameRepository.Find(code)
 }
 
-func (r *redirectService) Store(redirect *Redirect) error {
-	if err := validate.New().Struct(redirect); err != nil {
-		return errs.Wrap(ErrRedirectInvalid, "service.Redirect.Store")
+func (d *dwService) Store(DataWarehouseDataFrame *DataWarehouseDataFrame) error {
+	if err := validate.New().Struct(DataWarehouseDataFrame); err != nil {
+		return errs.Wrap(ErrRedirectInvalid, "service.DataWarehouseDataFrame.Store")
 	}
-	errs.Wrap(ErrRedirectInvalid, "service.Redirect.Store")
-	redirect.Code = shortid.MustGenerate()
-	redirect.CreatedAt = time.Now().UTC().Unix()
-	return r.redirectRepo.Store(redirect)
+	errs.Wrap(ErrRedirectInvalid, "service.DataWarehouseDataFrame.Store")
+	// DataWarehouseDataFrame.Destination = shortid.MustGenerate()
+	// DataWarehouseDataFrame.Data = time.Now().UTC().Unix()
+	return d.dataWarehouseDataFrameRepository.Store(DataWarehouseDataFrame)
 }
-
-// func (r *redirectService) Store(redirect *Redirect) error {
-// 	if err := validate.Validate(redirect); err != nil {
-// 		return errs.Wrap(ErrRedirectInvalid, "service.Redirect.Store")
-// 	}
-// 	redirect.Code = shortid.MustGenerate()
-// 	redirect.CreatedAt = time.Now().UTC().Unix()
-// 	return r.redirectRepo.Store(redirect)
-// }
