@@ -1,7 +1,7 @@
 package dw
 
 //RedirectService dwindows 10 built dools
-type RedirectService interface {
-	Find(code string) (*Redirect, error)
-	Store(redirect *Redirect) error
+type DwService interface {
+	Find(code string) (*DataWarehouseDataFrame, error)
+	Store(dataWarehouseDataFrame *DataWarehouseDataFrame) error
 }

@@ -21,7 +21,6 @@ func SubZmqTick() {
 		fmt.Printf("[%s] %s\n", address, contents)
 		// spew.Dump("%+v\n", contents)
 		// return address, contents
-
 	}
 }
 
