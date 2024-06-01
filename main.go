@@ -16,6 +16,9 @@ func main() {
 	emszmqpbsub.SubKrakenTick()
 
 	// oandav20.Oandav20Stream()
+
+	//test
+
 }
 
 // import (
