@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"io"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -37,7 +37,7 @@ func main() {
 	}
 	defer resp.Body.Close()
 
-	body, err = io.ReadAll(resp.Body)
+	body, err = ioutil.ReadAll(resp.Body)
 	if err != nil {
 		log.Fatalln(err)
 	}
