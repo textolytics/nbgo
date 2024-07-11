@@ -1,4 +1,0 @@
-struct Person {
-  Name string
-  Age uint8
-}

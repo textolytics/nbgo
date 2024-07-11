@@ -1,4 +1,0 @@
-type <ServiceName>_FooServer interface {
-	Send(*MsgB) error
-	grpc.ServerStream
-}
