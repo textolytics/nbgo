@@ -30,27 +30,27 @@ type Field struct {
 
 // Schema represents a configuration schema
 type Schema struct {
-	ID          string    `json:"id"`
-	Name        string    `json:"name"`
-	Version     string    `json:"version"`
+	ID          string     `json:"id"`
+	Name        string     `json:"name"`
+	Version     string     `json:"version"`
 	Type        SchemaType `json:"type"`
-	Description string    `json:"description"`
-	Fields      []Field   `json:"fields"`
-	CreatedAt   time.Time `json:"created_at"`
-	UpdatedAt   time.Time `json:"updated_at"`
-	Valid       bool      `json:"valid"`
-	Errors      []string  `json:"errors,omitempty"`
+	Description string     `json:"description"`
+	Fields      []Field    `json:"fields"`
+	CreatedAt   time.Time  `json:"created_at"`
+	UpdatedAt   time.Time  `json:"updated_at"`
+	Valid       bool       `json:"valid"`
+	Errors      []string   `json:"errors,omitempty"`
 }
 
 // Annotation represents provider configuration annotation
 type Annotation struct {
-	ID          string            `json:"id"`
-	Provider    string            `json:"provider"`
-	Description string            `json:"description"`
+	ID          string                 `json:"id"`
+	Provider    string                 `json:"provider"`
+	Description string                 `json:"description"`
 	Settings    map[string]interface{} `json:"settings"`
-	Environment map[string]string  `json:"environment"`
-	CreatedAt   time.Time         `json:"created_at"`
-	UpdatedAt   time.Time         `json:"updated_at"`
+	Environment map[string]string      `json:"environment"`
+	CreatedAt   time.Time              `json:"created_at"`
+	UpdatedAt   time.Time              `json:"updated_at"`
 }
 
 // BuildConfiguration represents build configuration for a provider
@@ -60,47 +60,47 @@ type BuildConfiguration struct {
 	Version     string            `json:"version"`
 	Targets     []string          `json:"targets"`
 	Flags       []string          `json:"flags"`
-	Environment map[string]string  `json:"environment"`
+	Environment map[string]string `json:"environment"`
 	CreatedAt   time.Time         `json:"created_at"`
 	UpdatedAt   time.Time         `json:"updated_at"`
 }
 
 // BuildTarget represents a build target (OS/Arch combination)
 type BuildTarget struct {
-	ID          string   `json:"id"`
-	Name        string   `json:"name"`
-	OS          string   `json:"os"`
-	Arch        string   `json:"arch"`
-	Enabled     bool     `json:"enabled"`
-	BuildFlags  []string `json:"build_flags,omitempty"`
-	OutputPath  string   `json:"output_path,omitempty"`
-	CreatedAt   time.Time `json:"created_at"`
-	UpdatedAt   time.Time `json:"updated_at"`
+	ID         string    `json:"id"`
+	Name       string    `json:"name"`
+	OS         string    `json:"os"`
+	Arch       string    `json:"arch"`
+	Enabled    bool      `json:"enabled"`
+	BuildFlags []string  `json:"build_flags,omitempty"`
+	OutputPath string    `json:"output_path,omitempty"`
+	CreatedAt  time.Time `json:"created_at"`
+	UpdatedAt  time.Time `json:"updated_at"`
 }
 
 // ProviderMetadata contains metadata about a provider
 type ProviderMetadata struct {
-	ID              string        `json:"id"`
-	Name            string        `json:"name"`
-	Type            string        `json:"type"`
-	Version         string        `json:"version"`
-	DocumentationURL string       `json:"documentation_url"`
-	Schema          *Schema       `json:"schema,omitempty"`
-	Annotation      *Annotation   `json:"annotation,omitempty"`
-	BuildConfig     *BuildConfiguration `json:"build_config,omitempty"`
-	BuildTargets    []BuildTarget `json:"build_targets,omitempty"`
-	LastScanned     time.Time     `json:"last_scanned"`
+	ID               string              `json:"id"`
+	Name             string              `json:"name"`
+	Type             string              `json:"type"`
+	Version          string              `json:"version"`
+	DocumentationURL string              `json:"documentation_url"`
+	Schema           *Schema             `json:"schema,omitempty"`
+	Annotation       *Annotation         `json:"annotation,omitempty"`
+	BuildConfig      *BuildConfiguration `json:"build_config,omitempty"`
+	BuildTargets     []BuildTarget       `json:"build_targets,omitempty"`
+	LastScanned      time.Time           `json:"last_scanned"`
 }
 
 // Repository manages schemas, annotations, and configurations
 type Repository struct {
-	mu                sync.RWMutex
-	schemas           map[string]*Schema
-	annotations       map[string]*Annotation
-	buildConfigs      map[string]*BuildConfiguration
-	buildTargets      map[string]*BuildTarget
-	providerMetadata  map[string]*ProviderMetadata
-	validators        map[SchemaType]SchemaValidator
+	mu               sync.RWMutex
+	schemas          map[string]*Schema
+	annotations      map[string]*Annotation
+	buildConfigs     map[string]*BuildConfiguration
+	buildTargets     map[string]*BuildTarget
+	providerMetadata map[string]*ProviderMetadata
+	validators       map[SchemaType]SchemaValidator
 }
 
 // SchemaValidator validates schemas of a specific type
@@ -312,12 +312,12 @@ func (r *Repository) ValidateSchemaData(schemaID string, data map[string]interfa
 
 // DiscoveryResult contains results from a discovery scan
 type DiscoveryResult struct {
-	ScanTime        time.Time
-	ProvidersFound  int
-	SchemasGenerated int
-	AnnotationsFound int
+	ScanTime          time.Time
+	ProvidersFound    int
+	SchemasGenerated  int
+	AnnotationsFound  int
 	BuildTargetsFound int
-	Errors          []string
+	Errors            []string
 }
 
 // Discovery scans provider documentation and generates schemas/annotations
@@ -381,12 +381,12 @@ func (d *Discovery) ScanProviders(ctx context.Context) (*DiscoveryResult, error)
 
 			// Create default annotation
 			annotation := &Annotation{
-				ID:       fmt.Sprintf("annotation_%s", provider),
-				Provider: provider,
-				Settings: make(map[string]interface{}),
+				ID:          fmt.Sprintf("annotation_%s", provider),
+				Provider:    provider,
+				Settings:    make(map[string]interface{}),
 				Environment: make(map[string]string),
-				CreatedAt: time.Now(),
-				UpdatedAt: time.Now(),
+				CreatedAt:   time.Now(),
+				UpdatedAt:   time.Now(),
 			}
 
 			if err := d.repository.SaveAnnotation(annotation); err != nil {

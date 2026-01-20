@@ -13,14 +13,14 @@ import (
 
 // ConfigManager manages all configurations for NBGO
 type ConfigManager struct {
-	mu              sync.RWMutex
-	config          map[string]interface{}
-	validators      map[string]ConfigValidator
-	watchers        map[string][]ConfigWatcher
-	lastModified    time.Time
-	configPath      string
-	backupDir       string
-	logger          io.Writer
+	mu           sync.RWMutex
+	config       map[string]interface{}
+	validators   map[string]ConfigValidator
+	watchers     map[string][]ConfigWatcher
+	lastModified time.Time
+	configPath   string
+	backupDir    string
+	logger       io.Writer
 }
 
 // ConfigValidator validates configuration

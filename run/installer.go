@@ -11,39 +11,39 @@ import (
 
 // InstallationTarget represents a target for installation
 type InstallationTarget struct {
-	ID          string
-	Name        string
-	Description string
+	ID           string
+	Name         string
+	Description  string
 	Dependencies []string
-	Type        string // "provider", "service", "tool"
-	Version     string
-	Enabled     bool
-	Installed   bool
-	Status      string
-	LastAttempt time.Time
+	Type         string // "provider", "service", "tool"
+	Version      string
+	Enabled      bool
+	Installed    bool
+	Status       string
+	LastAttempt  time.Time
 }
 
 // InstallationResult tracks installation results
 type InstallationResult struct {
-	TargetID    string
-	Success     bool
-	Error       string
-	Output      string
-	Duration    time.Duration
-	Timestamp   time.Time
+	TargetID     string
+	Success      bool
+	Error        string
+	Output       string
+	Duration     time.Duration
+	Timestamp    time.Time
 	Dependencies []string
-	Status      string
+	Status       string
 }
 
 // InstallationManager manages installation of providers and services
 type InstallationManager struct {
-	mu             sync.RWMutex
-	targets        map[string]*InstallationTarget
-	results        []*InstallationResult
-	installers     map[string]InstallerFunc
-	installOrder   []string
-	ctx            context.Context
-	cancel         context.CancelFunc
+	mu           sync.RWMutex
+	targets      map[string]*InstallationTarget
+	results      []*InstallationResult
+	installers   map[string]InstallerFunc
+	installOrder []string
+	ctx          context.Context
+	cancel       context.CancelFunc
 }
 
 // InstallerFunc is a function that installs a target
@@ -91,8 +91,8 @@ func (im *InstallationManager) Install(targetID string) (*InstallationResult, er
 	}
 
 	result := &InstallationResult{
-		TargetID:  targetID,
-		Timestamp: time.Now(),
+		TargetID:     targetID,
+		Timestamp:    time.Now(),
 		Dependencies: target.Dependencies,
 	}
 
@@ -253,19 +253,19 @@ func ShellInstaller(script string) InstallerFunc {
 
 // HealthCheck checks if installation is valid
 type HealthCheck struct {
-	TargetID string
-	Name     string
+	TargetID  string
+	Name      string
 	CheckFunc func(ctx context.Context) error
-	Interval time.Duration
+	Interval  time.Duration
 }
 
 // HealthCheckMonitor monitors health of installations
 type HealthCheckMonitor struct {
-	mu         sync.RWMutex
-	checks     map[string]*HealthCheck
-	results    map[string]error
-	ticker     *time.Ticker
-	done       chan bool
+	mu      sync.RWMutex
+	checks  map[string]*HealthCheck
+	results map[string]error
+	ticker  *time.Ticker
+	done    chan bool
 }
 
 // NewHealthCheckMonitor creates a new health check monitor
