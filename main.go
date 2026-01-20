@@ -112,7 +112,7 @@ func main() {
 	registerCLICommands(cliApp, ctx, appLogger)
 
 	// Initialize task executor
-	taskExecutor := task.NewExecutor(4, 3, 30*time.Second)
+	_ = task.NewExecutor(4, 3, 30*time.Second)
 
 	// Start runtime
 	if err := runtime.Start(ctx); err != nil {

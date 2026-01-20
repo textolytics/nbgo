@@ -1,4 +1,4 @@
-package config
+package conf
 
 import (
 	"context"
@@ -90,7 +90,7 @@ func (cm *ConfigManager) Set(key string, value interface{}) error {
 		}
 	}
 
-	oldValue, exists := cm.config[key]
+	oldValue, _ := cm.config[key]
 	cm.config[key] = value
 	cm.lastModified = time.Now()
 	cm.log("Set %s = %v", key, value)

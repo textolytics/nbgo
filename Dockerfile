@@ -3,19 +3,22 @@ FROM golang:1.22.3-alpine AS builder
 WORKDIR /app
 
 # Install dependencies
-RUN apk add --no-cache git ca-certificates tzdata
+RUN apk add --no-cache git ca-certificates tzdata make
+
+# Copy all source code first (including sub-modules)
+COPY . .
 
 # Copy go mod files
 COPY go.mod go.sum ./
 
 # Download dependencies
-RUN go mod download
+RUN go mod download && go mod verify
 
-# Copy source code
-COPY . .
+# Download indirect dependencies and tidy
+RUN go mod tidy
 
 # Build application
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o nbgo .
+RUN CGO_ENABLED=0 GOOS=linux go build -v -a -installsuffix cgo -o nbgo .
 
 # Final stage
 FROM alpine:latest

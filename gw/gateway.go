@@ -1,5 +1,4 @@
 package gw
-package gw
 
 import (
 	"context"
@@ -96,11 +95,11 @@ type KlineHandler func(kline *Kline) error
 
 // BaseGateway provides common functionality
 type BaseGateway struct {
-	typ        GatewayType
-	connected  bool
-	mu         sync.RWMutex
-	config     map[string]interface{}
-	obsHandlers map[string][]OrderBookHandler
+	typ           GatewayType
+	connected     bool
+	mu            sync.RWMutex
+	config        map[string]interface{}
+	obsHandlers   map[string][]OrderBookHandler
 	tradeHandlers map[string][]TradeHandler
 	klineHandlers map[string][]KlineHandler
 }
@@ -108,12 +107,12 @@ type BaseGateway struct {
 // NewBaseGateway creates a new base gateway
 func NewBaseGateway(typ GatewayType) *BaseGateway {
 	return &BaseGateway{
-		typ:            typ,
-		connected:      false,
-		config:         make(map[string]interface{}),
-		obsHandlers:    make(map[string][]OrderBookHandler),
-		tradeHandlers:  make(map[string][]TradeHandler),
-		klineHandlers:  make(map[string][]KlineHandler),
+		typ:           typ,
+		connected:     false,
+		config:        make(map[string]interface{}),
+		obsHandlers:   make(map[string][]OrderBookHandler),
+		tradeHandlers: make(map[string][]TradeHandler),
+		klineHandlers: make(map[string][]KlineHandler),
 	}
 }
 

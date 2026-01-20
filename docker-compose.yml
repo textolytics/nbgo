@@ -47,17 +47,18 @@ services:
     restart: unless-stopped
 
   zmq:
-    image: zeromq/zeromq:latest
+    image: alpine:latest
     container_name: nbgo-zmq
     ports:
       - "5555:5555"
       - "5556:5556"
+    command: sh -c "apk add --no-cache zeromq && sleep infinity"
     networks:
       - nbgo-network
     restart: unless-stopped
 
   clickhouse:
-    image: clickhouse/clickhouse-server:latest
+    image: clickhouse/clickhouse-server:24.1-alpine
     container_name: nbgo-clickhouse
     ports:
       - "8123:8123"
@@ -88,15 +89,16 @@ services:
     restart: unless-stopped
 
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v2.48.1
     container_name: nbgo-prometheus
     ports:
       - "9090:9090"
     volumes:
-      - ./conf/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./conf/prometheus.yml:/etc/prometheus/prometheus.yml:ro
       - prometheus_data:/prometheus
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
     networks:
       - nbgo-network
     restart: unless-stopped

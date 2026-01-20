@@ -1,5 +1,4 @@
 package core
-package core
 
 import (
 	"context"
@@ -10,32 +9,32 @@ import (
 type ProviderType string
 
 const (
-	ProviderTypeC             ProviderType = "c"
-	ProviderTypeRust          ProviderType = "rust"
-	ProviderTypeGo            ProviderType = "go"
-	ProviderTypePython        ProviderType = "python"
-	ProviderTypeFlutter       ProviderType = "flutter"
+	ProviderTypeC              ProviderType = "c"
+	ProviderTypeRust           ProviderType = "rust"
+	ProviderTypeGo             ProviderType = "go"
+	ProviderTypePython         ProviderType = "python"
+	ProviderTypeFlutter        ProviderType = "flutter"
 	ProviderTypeRobotFramework ProviderType = "robot_framework"
-	ProviderTypeMCP           ProviderType = "mcp"
+	ProviderTypeMCP            ProviderType = "mcp"
 )
 
 // Provider defines the interface for all providers
 type Provider interface {
 	// Initialize initializes the provider
 	Initialize(ctx context.Context) error
-	
+
 	// Start starts the provider
 	Start(ctx context.Context) error
-	
+
 	// Stop stops the provider gracefully
 	Stop(ctx context.Context) error
-	
+
 	// GetName returns the provider name
 	GetName() string
-	
+
 	// GetType returns the provider type
 	GetType() ProviderType
-	
+
 	// IsHealthy checks if the provider is healthy
 	IsHealthy(ctx context.Context) error
 }

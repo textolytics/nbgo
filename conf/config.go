@@ -2,10 +2,11 @@ package conf
 
 import (
 	"encoding/json"
-	"encoding/yaml"
 	"fmt"
 	"io/ioutil"
 	"sync"
+
+	"gopkg.in/yaml.v2"
 )
 
 // Config represents the application configuration
