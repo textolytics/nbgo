@@ -36,9 +36,17 @@ func main() {
 
 	// Load configuration
 	configManager := conf.NewManager()
-	if err := configManager.LoadYAML("nbgo.yml"); err != nil {
-		appLogger.Error("Failed to load configuration", "error", err.Error())
-		// Continue with defaults
+	configPaths := []string{"nbgo.yml", "./nbgo.yml", "/root/nbgo.yml"}
+	var configLoaded bool
+	for _, path := range configPaths {
+		if err := configManager.LoadYAML(path); err == nil {
+			configLoaded = true
+			appLogger.Info("Configuration loaded from", "path", path)
+			break
+		}
+	}
+	if !configLoaded {
+		appLogger.Warning("Configuration file not found, using defaults")
 	}
 
 	// Validate configuration

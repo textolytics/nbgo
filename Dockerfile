@@ -30,6 +30,10 @@ WORKDIR /root/
 # Copy binary from builder
 COPY --from=builder /app/nbgo .
 
+# Copy configuration files
+COPY nbgo.yml .
+COPY conf/ conf/
+
 # Expose default port
 EXPOSE 8080
 
