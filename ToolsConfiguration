@@ -1,0 +1,72 @@
+# Tools Configuration
+
+
+## Environment
+
+GOBIN: undefined
+toolsGopath: 
+gopath: /home/textolytics/go
+GOROOT: /snap/go/11017
+PATH: /home/textolytics/.vscode-server/bin/585eba7c0c34fd6b30faac7c62a42050bfbc0086/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/VMware/VMware Player/bin/:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Rust stable GNU 1.92/bin:/mnt/c/Program Files/Rust stable MSVC 1.92/bin:/mnt/c/Program Files/PyManager/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Go/bin:/mnt/c/Users/textolytics/scoop/shims:/mnt/c/Users/textolytics/.cargo/bin:/mnt/c/Users/textolytics/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/textolytics/flutter/bin:/mnt/c/Users/textolytics/AppData/Local/Pub/Cache/bin:/mnt/c/Users/textolytics/AppData/Local/Python/bin:/mnt/c/Users/textolytics/.dotnet/tools:/mnt/c/Users/textolytics/AppData/Local/Microsoft/WinGet/Links:/mnt/c/Users/textolytics/go/bin:/snap/bin
+
+## Tools
+
+	go:	/snap/go/current/bin/go: go version go1.25.5 linux/amd64
+
+	gotests:	not installed
+	impl:	not installed
+	goplay:	not installed
+	dlv:	/home/textolytics/go/bin/dlv	(version: v1.26.0 built with go: go1.25.5)
+	gopls:	/home/textolytics/go/bin/gopls	(version: v0.21.0 built with go: go1.25.5)
+
+## Go env
+
+Workspace Folder (nbgo): /home/textolytics/nbgo
+
+	AR='ar'
+	CC='gcc'
+	CGO_CFLAGS='-O2 -g'
+	CGO_CPPFLAGS=''
+	CGO_CXXFLAGS='-O2 -g'
+	CGO_ENABLED='1'
+	CGO_FFLAGS='-O2 -g'
+	CGO_LDFLAGS='-O2 -g'
+	CXX='g++'
+	GCCGO='gccgo'
+	GO111MODULE=''
+	GOAMD64='v1'
+	GOARCH='amd64'
+	GOAUTH='netrc'
+	GOBIN=''
+	GOCACHE='/home/textolytics/.cache/go-build'
+	GOCACHEPROG=''
+	GODEBUG=''
+	GOENV='/home/textolytics/.config/go/env'
+	GOEXE=''
+	GOEXPERIMENT=''
+	GOFIPS140='off'
+	GOFLAGS=''
+	GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build580640682=/tmp/go-build -gno-record-gcc-switches'
+	GOHOSTARCH='amd64'
+	GOHOSTOS='linux'
+	GOINSECURE=''
+	GOMOD='/dev/null'
+	GOMODCACHE='/home/textolytics/go/pkg/mod'
+	GONOPROXY=''
+	GONOSUMDB=''
+	GOOS='linux'
+	GOPATH='/home/textolytics/go'
+	GOPRIVATE=''
+	GOPROXY='https://proxy.golang.org,direct'
+	GOROOT='/snap/go/11017'
+	GOSUMDB='sum.golang.org'
+	GOTELEMETRY='local'
+	GOTELEMETRYDIR='/home/textolytics/.config/go/telemetry'
+	GOTMPDIR=''
+	GOTOOLCHAIN='auto'
+	GOTOOLDIR='/snap/go/11017/pkg/tool/linux_amd64'
+	GOVCS=''
+	GOVERSION='go1.25.5'
+	GOWORK=''
+	PKG_CONFIG='pkg-config'
+	

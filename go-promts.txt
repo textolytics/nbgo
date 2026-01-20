@@ -1,0 +1,677 @@
+Generate all Providers Modules and Environment Files to the Project Root for all of the following:
+Read, Load, Save and Apply Modules Documentation, Sources and Examples Providers:{
+1. core modules and scripts for Core Providers
+C: https://zeromq.org/languages/c/
+Rust: https://github.com/modelcontextprotocol/rust-sdk 
+GO: https://GO.dev/doc/tutorial/web-service-gin
+Python: https://www.python.org/
+Flutter: https://docs.flutter.dev/
+Robot Framework: https://robotframework.org/
+MCP: https://github.com/modelcontextprotocol
+
+2. mb modules and scripts for Message Bus Providers
+ZMQ: https://zeromq.org 
+MQTT: https://mqtt.org/
+
+3. dw modules for Market Data System for Data Warehousing Providers
+clickhouse: https://clickhouse.com/docs
+Influxdb: https://docs.influxdata.com/?section=%252F
+parquet: https://parquet.apache.org/docs/
+
+4. mon modules for Market Data System Monitoring Providers
+VIC: https://docs.victoriametrics.com/operator/api/
+Influxdb: https://docs.influxdata.com/?section=%252F
+Grafana: https://grafana.com/docs/
+5. cli modules and scripts for CLI Providers
+6. mon modules and scripts for Monitoring Providers 
+7. gw modules and scripts for Gateway Providers
+8. run modules and scripts for Runtime Providers
+9. conf modules and scripts for Configuration Providers
+10. api modules and scripts for API Providers
+11. mcp modules and scripts for MCP Providers
+12. doc modules and scripts for Documentation Providers
+13. logs modules and scripts for Log Providers 
+14. test modules and scripts for Test Providers
+15. task modules and scripts for Task Providers
+16. build modules and scripts for Task Providers
+}
+
+Read, Load, Save and Apply SDKs Documentation, Sources and Examples Providers:{ 
+c https://zeromq.org/languages/c/
+rust https://github.com/modelcontextprotocol/rust-sdk 
+GO https://GO.dev/doc/tutorial/web-service-gin
+python https://www.python.org/
+Robot Framework https://robotframework.org/
+mcp https://github.com/modelcontextprotocol
+zmq https://zeromq.org/get-graceful restart and validate start ed/
+}
+
+Read, Load, Save and Apply Environment Documentation, Sources and Examples Providers:{
+venv: https://docs.python.org/3/library/venv.html
+uv: https://docs.astral.sh/uv/pip/environments/
+docker: https://docs.docker.com/
+lxc: https://linuxcontainers.org/lxc/documentation/
+podman: https://podman.io/
+}
+
+
+Read, Load, Save and Apply Gateways Sources Documentation, Sources and Examples Providers:{
+1. gate: https://www.gate.com/gate-api https://github.com/gateio?tab=repositories
+2. freedx: https://docs.exchange.freedx.com/apiDocs.html#?route=overview
+}
+
+Market Data System Configuration Manager Provider UI:{
+Discover Schemas, Update Schemas, Save Schemas, Validate Schemas, Generate Schemas for all Providers 
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access to Main Menu:
+API, Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Crawl, Parse and Read all Providers Documentation, Sources Repositories and automatically discover settings for generating schemas for all Providers in schema module directory 
+Generate schema Environment and activate it with Environment Providers and Validate Environment Variables and Firewall Access from Host to install configurations
+Read repository and generate schemas for all Providers to generate configurations for all Providers Sources automatic generation of task and test modules to automatically parse best practices environment variables to 
+Generate all schemas in schema directory of schema Module for all modules in project directory root 
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+##---Discover Annotations, Update Annotations, Save Annotations, Validate Annotations, Generate Annotations for all Providers
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access Main Menu:
+API, Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Crawl, Parse and Read for all Annotations for all Providers Documentation and Sources Repositories and automatically discover and generate lists for GO unit tests, for Autodiscover , using GO and Robot Framework notebooks for task steps configurations and task action execution configuration module in conf directory for GO, python and Robot Frameworks SDK Provider tests and Tasks in task and task directories for Project Preconditions and Initialization Tasks, Validation Tests and Monitoring.
+Generate Annotation Environment and activate it with Environment Providers and Validate Environment Variables and Firewall Access from Host to install configurations
+Read repository and generate Annotations for all Providers to generate configurations for all Providers Sources automatic generation of task and test modules to automatically parse best practices environment variables to 
+Generate Annotations and documentations for all modules in project directory root
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+##---Discover build configurations, Update build configurations, Save build configurations, Validate build configurations, Generate build configurations for all Providers 
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Crawl, Parse and Read for all build configurations for all Providers Documentation and Sources Repositories and automatically discover and generate lists for GO unit tests, for Autodiscover, using GO and Robot Framework notebooks for task steps configurations and task action execution configuration module in conf directory for GO, python and Robot Frameworks SDK Provider Tests and Tasks in task and task directories
+for Project Preconditions and Initialization Tasks, Validation Tests and Monitoring 
+Generate build configurations Environment and activate it with Environment Providers and Validate Environment Variables and Firewall Access from Host to install configurations
+Read repository and generate build configurations for all Providers to generate configurations for all Providers Sources automatic generation of task and test modules to automatically parse best practices environment variables to 
+Generate build configurations and documentations for all modules in project directoriy root
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+
+##---Discover build targets, Update build targets, Save build targets, Validate build targets, Generate build targets for all Providers-------------------------------------------------------------------------------------------------------------------- 
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Crawl, Parse and Read for all build targets for all Providers Documentation and Sources Repositories and automatically discover and generate lists for GO unit tests, for Autodiscover , using GO and 
+Robot Framework notebooks for task steps targets and task action execution configuration module in conf directory for GO, python and Robot Frameworks SDK Provider tests and Tasks in task and task directories
+for Project Preconditions and Initialization Tasks, Validation tests and Monitoring 
+Generate targets Environment with Environment and activate it Providers and Validate Environment Variables and Firewall Access from Host to install targets
+Read repository and generate build targets for all Providers to generate targets for all Providers Sources automatic generation of task and test modules to automatically parse best practices environment variables to 
+Generate build targets and documentations for all modules in project directoriy root
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+
+##---Discover installations targets, Update build targets, Save build targets, Validate build targets, Install for all targets for all Providers----------------------------------------------------------------------------------------------------------- 
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Crawl, Parse and Read for all build targets for all Providers Documentation and Sources Repositories and automatically discover and generate lists for GO unit tests, for Autodiscover , using GO and 
+Robot Framework notebooks for task steps targets and task action execution configuration module in conf directory for GO, python and Robot Frameworks SDK Provider tests and Tasks in task and task directories
+for Project Preconditions and Initialization Tasks, Validation tests and Monitoring 
+Generate Install for all targets Environment and activate it with Environment Providers and Validate Environment Variables and Firewall Access from Host to install targets
+Read repository and Install for all targets for all Providers to Install for all targets for all Providers Sources automatic generation of task and test modules to automatically parse best practices environment variables to 
+Generate build targets and documentations for all modules in project directoriy root
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+}
+
+##---Market Data System Environment Manager Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Discover and Validate for all Environments for all modules Autodiscover with best practices scrips.
+graceful restart and validate start and Validate for all Environments for all modules components, services, datas and functions:
+Purge and Validate for all Environments for all modules components, services, datas and functions:
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+}
+
+##---Market Data System graceful restart and validate start Manager Provider UI:{
+---------------------------------------------------------------------------------------------------------------------------------------
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Discover Generated task Libraries for all Autodiscover with best practices scrips.
+Run for all graceful restart and validate start tasks for all modules components, services, datas and functions:
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+}
+
+##---Market Data System graceful restart and validate stop Manager Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Discover Generated task Libraries for all Autodiscover with best practices scrips.
+Run for all graceful restart and validate start tasks for all modules components, services, datas and functions:
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+}
+
+##---Market Data System Tests Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Using GO and Robot Framework Providers:
+Discover for all Autodiscover with best practices scrips and Genrate task Libraries, Using mathematical combinatorics, limited to quantity of market data system Autodiscover in Tasks directory for task scenarios and task scenarions for Autodiscover ,
+Discover in for all Providers
+Discover in for all Modules 
+Discover in for all Schemas 
+Generate methods of market data provider for components and services, 
+Generate objects of market data provider for Autodiscover of Market Data System,
+Generate functions of market data provider for Autodiscover of Market Data System,
+Generate tests of market data provider for Autodiscover of Market Data System,
+Generate message schemas of market data provider for Autodiscover of Market Data System,
+Generate caching of market data provider for Autodiscover of Market Data System,
+Generate data schemas of market data provider for Autodiscover of Market Data System,
+Generate instruments lists of market data provider for Autodiscover of Market Data System
+Generate market data types of market data provider for Autodiscover of Market Data System
+Generate discover host and container host drivers and hardware optimization libraries
+Generate task libraries for module component, service, data and function:
+Generate Schemas task libraries
+Generate Annotations task libraries
+Generate Configurations task libraries
+Generate Targets task libraries
+Generate Environment task libraries
+Generate Unit task librariesa
+Generate Regression task libraries
+Generate Integration task libraries
+Generate Functional task libraries
+Generate Non_functional task libraries
+Generate including but not limited to the follwing Tests:
+bundled and individual tests sequences to install dependencies of components and services
+bundled and individual tests sequences to configure pre-requisites Autodiscover 
+bundled and individual tests sequences to build components and services
+bundled and individual tests sequences to build management scripts for components and services
+bundled and individual tests sequences to build tests for components and services
+bundled and individual tests sequences to build tests for management scripts of components and services
+bundled and individual tests sequences to bundled and individual tests sequences to discover and graceful restart and validate start for all components and services,
+bundled and individual tests sequences to bundled and individual tests sequences to discover and graceful restart and validate stop for all components and services,
+bundled and individual tests sequences to bundled and individual tests sequences to discover and graceful regraceful restart and validate start for all components and services,
+bundled and individual tests sequences to bundled and individual tests sequences to discover and graceful view status of Autodiscover 
+bundled and individual tests sequences to discover and save to conf directory for all configurations and schemas for all Autodiscover of the market data system
+bundled and individual tests sequences to discover, read for all configurations from conf directory and generate build scripts for Autodiscover in build directory, 
+bundled and individual tests sequences to discover, read for all build script from build directory and install components and services
+bundled and individual tests sequences to discover and uninstall components and services
+bundled and individual tests sequences to run tests for availability of graceful install dependencies and configure pre-requisites of components and services,
+bundled and individual tests sequences to run tests for availability of graceful uninstall dependencies of components and services,
+bundled and individual tests sequences to run tests for availability of graceful restart and validate start components and services,
+bundled and individual tests sequences to run tests for availability of graceful restart and validate stop components and services,
+bundled and individual tests sequences to run tests for availability of graceful restart and validate stop components and services,
+bundled and individual tests sequences to run tests for availability of graceful build components and services,
+bundled and individual tests sequences to run tests for availability of graceful configure components and services,
+bundled and individual tests sequences to configure Autodiscover 
+bundled and individual tests sequences to build Autodiscover 
+bundled and individual tests sequences to install Autodiscover 
+bundled and individual tests sequences to graceful restart and validate start Autodiscover 
+bundled and individual tests sequences to graceful restart and validate stop Autodiscover 
+bundled and individual tests sequences to regraceful restart and validate start Autodiscover 
+bundled and individual tests sequences to status Autodiscover 
+Generate including but not limited to the follwing Scenarios:
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory instruments
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory protocols
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory endpoints
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory market data types
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory market data workflows
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory market data examples
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory components
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory services
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory data
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory functions
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory configs
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory scenarios to validate, publish to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory builds
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+}
+
+##---Market Data System Tasks Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Using GO and Robot Framework Providers:
+Discover, vaildate and save for all modules Tasks
+Discover for all Autodiscover with best practices scrips and Genrate task Libraries, Using mathematical combinatorics, limited to quantity of market data system Autodiscover in Tasks directory for task scenarios and task scenarions for Autodiscover ,
+Test for all Discovered task Libraries for all Autodiscover with best practices scrips.
+Configure for all Discovered task Libraries for all Autodiscover with best practices scrips.
+Run Generated task Libraries for all Autodiscover with best practices scrips.
+Monitore for all Discovered task Libraries for all Autodiscover with best practices scrips.
+Aggregate for all Discovered Market Data Types To New Topics tasks Libraries for all Autodiscover with best practices scrips.
+Validate and fix networking connection between modules at Message Bus
+graceful restart and validate start for all Modules Tasks
+graceful restart and validate stop for all Modules Tasks
+Status of for all Modules Tasks
+GO cli commands, GO unit Tasks
+Robot Framework regression, deployment, integration, validation and end to end Tasks for all discovered Tasks in task directory 
+Generate methods of market data provider for components and services, 
+Generate objects of market data provider for Autodiscover of Market Data System,
+Generate functions of market data provider for Autodiscover of Market Data System,
+Generate Tasks of market data provider for Autodiscover of Market Data System,
+Generate message schemas of market data provider for Autodiscover of Market Data System,
+Generate caching of market data provider for Autodiscover of Market Data System,
+Generate data schemas of market data provider for Autodiscover of Market Data System,
+Generate instruments lists of market data provider for Autodiscover of Market Data System
+Generate market data types of market data provider for Autodiscover of Market Data System
+Generate discover host and container host drivers and hardware optimization libraries
+Generate task libraries for module component, service, data and function:
+Generate Schemas task libraries 
+Generate Annotations task libraries
+Generate Configurations task libraries
+Generate Targets task libraries
+Generate Environment task libraries
+Generate Unit Tasks task librariesa
+Generate Regression task libraries
+Generate Integration task libraries
+Generate Functional task libraries
+Generate Non_functional task libraries
+Generate Route task libraries
+Generate Device task libraries
+Generate Topic task libraries
+Generate including but not limited to the following scenarios:
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory instruments
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory protocols
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory endpoints
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory market data types
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory market data workflows
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory market data examples
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory components
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory services
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory data
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory functions
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory configs
+scenarios to validate, publish for all validation logs data output to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory scenarios to validate, publish to general and individual unique topic name at zmq, write logs to files in logs directory and write logs to parquet format to data directory scenarios to validate, publish to general and individual unique topic name at zmq, write to log file in logs directory and write log to parquet format to data directory builds
+Generate including but not limited to the follwing Tasks types:
+bundled and individual Tasks sequences to install dependencies of components and services
+bundled and individual Tasks sequences to configure pre-requisites Autodiscover 
+bundled and individual Tasks sequences to build components and services
+bundled and individual Tasks sequences to build management scripts for components and services
+bundled and individual Tasks sequences to build Tasks for components and services
+bundled and individual Tasks sequences to build Tasks for management scripts of components and services
+bundled and individual Tasks sequences to bundled and individual Tasks sequences to discover and graceful restart and validate start for all components and services,
+bundled and individual Tasks sequences to bundled and individual Tasks sequences to discover and graceful restart and validate stop for all components and services,
+bundled and individual Tasks sequences to bundled and individual Tasks sequences to discover and graceful regraceful restart and validate start for all components and services,
+bundled and individual Tasks sequences to bundled and individual Tasks sequences to discover and graceful view status of Autodiscover 
+bundled and individual Tasks sequences to discover and save to conf directory for all configurations and schemas for all Autodiscover of the market data system
+bundled and individual Tasks sequences to discover, read for all configurations from conf directory and generate build scripts for Autodiscover in build directory, 
+bundled and individual Tasks sequences to discover, read for all build script from build directory and install components and services
+bundled and individual Tasks sequences to discover and uninstall components and services
+bundled and individual Tasks sequences to run Tasks for availability of graceful install dependencies and configure pre-requisites of components and services,
+bundled and individual Tasks sequences to run Tasks for availability of graceful uninstall dependencies of components and services,
+bundled and individual Tasks sequences to run Tasks for availability of graceful restart and validate start components and services,
+bundled and individual Tasks sequences to run Tasks for availability of graceful restart and validate stop components and services,
+bundled and individual Tasks sequences to run Tasks for availability of graceful restart and validate stop components and services,
+bundled and individual Tasks sequences to run Tasks for availability of graceful build components and services,
+bundled and individual Tasks sequences to run Tasks for availability of graceful configure components and services,
+bundled and individual Tasks sequences to configure Autodiscover 
+bundled and individual Tasks sequences to build Autodiscover 
+bundled and individual Tasks sequences to install Autodiscover 
+bundled and individual Tasks sequences to graceful restart and validate start Autodiscover 
+bundled and individual Tasks sequences to graceful restart and validate stop Autodiscover 
+bundled and individual Tasks sequences to regraceful restart and validate start Autodiscover 
+bundled and individual Tasks sequences to status Autodiscover 
+bundled and individual Tasks sequences to install dependencies of data and functions
+bundled and individual Tasks sequences to configure pre-requisites data and functions 
+bundled and individual Tasks sequences to build data and functions
+bundled and individual Tasks sequences to build management scripts for data and functions
+bundled and individual Tasks sequences to build Tasks for data and functions
+bundled and individual Tasks sequences to build Tasks for management scripts of data and functions
+bundled and individual Tasks sequences to bundled and individual Tasks sequences to discover and graceful restart and validate start for all data and functions,
+bundled and individual Tasks sequences to bundled and individual Tasks sequences to discover and graceful restart and validate stop for all data and functions,
+bundled and individual Tasks sequences to bundled and individual Tasks sequences to discover and graceful regraceful restart and validate start for all data and functions,
+bundled and individual Tasks sequences to bundled and individual Tasks sequences to discover and graceful view status of data and functions 
+bundled and individual Tasks sequences to discover and save to conf directory for all configurations and schemas for all data and functions of the market data system
+bundled and individual Tasks sequences to discover, read for all configurations from conf directory and generate build scripts for data and functions in build directory, 
+bundled and individual Tasks sequences to discover, read for all build script from build directory and install data and functions
+bundled and individual Tasks sequences to discover and uninstall data and functions
+bundled and individual Tasks sequences to run Tasks for availability of graceful install dependencies and configure pre-requisites of data and functions,
+bundled and individual Tasks sequences to run Tasks for availability of graceful uninstall dependencies of data and functions,
+bundled and individual Tasks sequences to run Tasks for availability of graceful restart and validate start data and functions,
+bundled and individual Tasks sequences to run Tasks for availability of graceful restart and validate stop data and functions,
+bundled and individual Tasks sequences to run Tasks for availability of graceful restart and validate stop data and functions,
+bundled and individual Tasks sequences to run Tasks for availability of graceful build data and functions,
+bundled and individual Tasks sequences to run Tasks for availability of graceful configure data and functions,
+bundled and individual Tasks sequences to configure data and functions 
+bundled and individual Tasks sequences to build data and functions 
+bundled and individual Tasks sequences to install data and functions 
+bundled and individual Tasks sequences to graceful restart and validate start data and functions 
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+
+##---Market Data System Commander Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+
+
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+
+##---Markert Data System Process Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Discover Providers
+Discover Modules
+Initialize Environments
+Initialize Modules
+graceful restart and validate start Environments
+graceful restart and validate start Modules
+graceful restart and validate stop Environments
+graceful restart and validate stop Modules
+Purge Environments
+Purge Modules
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+
+#---Market Data System Commander Actions Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Generate for all Schemas 
+Generate for all Annotations
+Generate for all Build configurations
+Build for all Targets
+Install for all Targets 
+Uninstall for all Targets 
+Deploy for all Targets 
+Purge for all Targets 
+graceful restart and validate start for all Targets 
+graceful restart and validate stop for all Targets 
+Save for all Targets 
+Regraceful restart and validate start for all Targets 
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+}
+
+#---Market Data System Commander Developer Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to Cli, Terminal and Keyboard Navigation with Arrows to Navigate over the following Main Menu:
+Fancy Commands Autodiscover of binary targets installations, cli, terminal with options to vies and aggregate market data types and instruments, instrument currencies, market data tick aggregation stream to new topics and market data depth aggregation
+Read Annotations from task module at task directory for manual, automated, STDOUT, CLI and Console Terminal Solarized Hightailed Emoji GUI Market Data System tests
+Read Annotations from Task module at task directory for manual, automated, STDOUT, CLI and Console Terminal Solarized Hightailed Emoji GUI Market Data System Commands
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+}
+
+##---Market Data System Core Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to Cli, Terminal and Keyboard Navigation with Arrows to Navigate over the following Main Menu:
+Terminal GUI and Keyboard Arrows and Buttons Navigation and config change scenarios
+Admin UI View: and Console Commands Autocompletion, Terminal GUI and Keyboard Arrows and Buttons Navigation and config change scenarios
+User UI View: View and Console Commands Autocompletion, Terminal GUI and Keyboard Arrows and Buttons Navigation and config change scenarios
+Developer UI View: View and Console Commands Autocompletion, Terminal GUI and Keyboard Arrows and Buttons Navigation and config change scenarios
+Core Module Applications GUI for Commands Executions and Logs View for all Messages, Instruments, Market Tick and Market Depth, Topics, Modules and Discovered Command Executions Access
+Core Module Applications GUI all Autodiscover of Market Data System for all Autodiscover 
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Monitoring View for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+}
+##---Market Data System Message Bus Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to Cli, Terminal and Keyboard Navigation with Arrows to Navigate over the following Main Menu:
+graceful restart and validate start Message Bus Provider Discovery, graceful restart and validate start Module Provider Discovery, Environment Discovery, components Discovery, services Discovery, data Discovery and functions Discovery of market data system
+graceful restart and validate start for all Message Bus Design Patterns
+graceful restart and validate stop for all Message Bus Design Patterns
+Read to Topics for all Message Bus Design Patterns
+Write to Topics for all Message Bus Design Patterns
+graceful restart and validate start Processing Topics Routing Instructions 
+graceful restart and validate start Processing Topics Routing Instructions
+Validate and fix all Messages, Instrument, Tick, Depth, Topic, Module and Command Executions:
+Inbound Data Event Dashboard 
+Outbound Data Event Dashboard
+Inbound module Event Dashboard 
+Outbound module Event Dashboard
+Inbound serialization Event Dashboard 
+Outbound serialization Dashboard
+Write to Topics Queue Event
+Read to Topics Queue Event
+Search with Regular Expressions to Topics Queue Event
+Request Executions from Router
+Execute Executions from Router
+Request Executions from Broker
+Execute Executions from Broker
+Request Executions from Dealer
+Execute Executions from Dealer 
+Events Data Request
+Events Data Reply Record
+Events Data Stream Request
+Events Data Stream Record
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+}
+##---Market Data System Monitoring Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to Cli, Terminal and Keyboard Navigation with Arrows to Navigate over the following Main Menu:
+For Monitoring mon module in mon directory Generate Best Practices Monitoring implementations With Available Providers:
+Generate and graceful restart and validate start Monitoring applications for all modules in all environments
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+}
+
+##---Market Data System Data Warehousing Provider UI:{
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Discover and Apply all Data Warehousing Schemas
+Discover and Subscribe to all Core Message Bus Topics
+Discover and Publish to all Data Warehouse Message Bus Topics 
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+}
+
+##---Market Data System MCP Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands in Cli, Terminal and Keyboard Navigation with Arrows to Navigate over the following Main Menu:
+Using GO Providers for MCP Provider and Robot Framework Providers for MCP Provider:
+Discover MCP Provider Servers Configurations for all Autodiscover of Market Data System
+Generate MCP Provider Servers Configurations for all Autodiscover of Market Data System
+Load MCP Provider Servers Configuration for all Autodiscover of Market Data System
+graceful restart and validate start MCP servers with Configuration for all Autodiscover of Market Data System
+graceful restart and validate stop MCP servers with Configuration for all Autodiscover of Market Data System
+graceful restart and validate start MCP servers Topics for all Autodiscover of Market Data System
+graceful restart and validate stop MCP servers Topics for all Autodiscover of Market Data System
+graceful restart and validate start MCP servers Tests for all Autodiscover of Market Data System
+graceful restart and validate stop MCP servers Tests for all Autodiscover of Market Data System
+graceful restart and validate start MCP servers Tasks for all Autodiscover of Market Data System
+graceful restart and validate stop MCP servers Tasks for all Autodiscover of Market Data System
+graceful restart and validate start MCP servers Logs for all Autodiscover of Market Data System
+graceful restart and validate stop MCP servers Logs for all Autodiscover of Market Data System
+graceful restart and validate start MCP servers Topics Routing for all Autodiscover of Market Data System
+graceful restart and validate stop MCP servers Topics Routing for all Autodiscover of Market Data System
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+}
+
+##---Market Data System Maintenance Provider UI:{
+Cli, Terminal and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Api, Message, Instrument, Market data, Topic, Module and Command Executions Access Main Menu:
+Cli, Terminal and Keyboard Navigation with Arrows to Navigate over the following Main Menu:
+Update Schemas:
+Read schemas from schema directory
+Update schemas from schema directory
+Save schemas to schema directory
+View schemas to schema directory
+View Data:
+View tick, depth and Instrument Details Schemas:
+View tick, depth and Instrument Details Topics:
+View tick, depth and Instrument Details DB:
+Module Event Parsing 
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Module Event Loading
+Module Event Execution
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+}
+##--Market Data System Modules Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Organize with best practices and automate discovery of zmq at mb applications project environment in vs code wsl for development and aggregated cli run according with hexagonal clean architecture and existing component directories and modules:
+1. gw - external connectivity for Autodiscover and data and functions 
+2. api - internal connectivity for Autodiscover and data and functions
+3. mb - internal message connectivity for objects and methods between Autodiscover and data and functions
+4. dw - internal data warehousing for Autodiscover and data and functions
+5. cli - command line interface and console UI for Autodiscover and data and functions
+6. mo - individual and aggregated UI for admins and users, flutter mobile web and desktop technologies clients service
+7. core - operational core for components interconnect, autodescovered, schema and messaging between components and services
+8. data - cached data and parquet data for Autodiscover and data and functions
+9. build - build output for all Autodiscover and data and functions
+9. conf - configuration for all Autodiscover and data and functions
+9. build - build all Autodiscover and data and functions
+10. run - GO and Robot Framework runtime environment for Autodiscover and data and functions
+11. logs - GO and Robot Framework logs from Autodiscover and data and functions
+12. mcp - GO and Robot Framework mcp servers with automated Autodiscover of zmq scenarios from Tasks and task libraries, Autodiscover of mb service topics of Autodiscover and data and functions
+12. task - for project maintenance and support Tasks and scenarios in GO and Robot Framework format task playbooks with statuses in GUI and in mb topic for all log output types, notebooks aggregated and individual containing but not limited to scenarios 
+14. task - Aggregations and individual GO and Robot Framework runnable task libraries with reposts and logs to stdout, files and zmq topics 
+15. doc - autogenerated documentation for all autodiscovered objects and methods of Autodiscover and data and functions to update configuration, build install and graceful restart and validate start top regraceful restart and validate start uninstall of GO integration to red and update topics and Topic configs in conf directory and re market data topics 
+Tailing logs View of Processing Topics Routing Instructions 
+OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+}
+##---Market Data System Other Commander Provider UI:{
+Generate UIs with Commands Autodiscover from sources and running, Commands Suggestions and Commands Autocompletions:
+API, Cli, Terminal, and Keyboard Navigation Fancy Templates Solarized Highlighting Simultaneous Available Commands Api, Message, Instrument, Market data, Topic, Module and Command Executions Access, Read, Update, Load and Apply from Main Menu all Schemas for API Cli, Terminal, and Keyboard Navigation with Arrows to Navigate over the following Main Menu to execute Commands to:
+Discover all Providers
+Discover all Modules
+Discover all Environments
+Discover all configurations for all Providers
+Discover all configurations for all Modules
+Discover all Configurations for all Environments
+Discover all Configurations for all Topics
+Discover all Instruments
+Discover all Market Data
+Discover all Configurations of Message Bus Topics for Discovered Instruments
+Discover all Configurations of Message Bus Topics for Tick Market Data 
+Discover all Configurations of Message Bus Topics for Depth Market Data
+Discover all Configurations of Message Bus Topics for Spot Instruments 
+Discover all Configurations of Message Bus Topics for Derivative Instruments
+Graceful start and validate start all Environments
+Graceful start and validate start all Modules
+Graceful start and validate start all Providers
+Graceful stop and validate stop all Environments
+Graceful stop and validate stop all Modules
+Graceful stop and validate stop all Providers
+Graceful restart and validate start all Environments
+Graceful restart and validate start all Modules
+Graceful restart and validate start all Providers
+Purge all Providers
+Purge all Modules
+Purge all Environments
+Test all Autodiscover of Market Data System
+Validate all Autodiscover of Market Data System
+Tailing logs View of Processing Topics Routing Instructions 
+Tailing OS Status Views of Processes and Services
+Data Views, Message, Instrument, Market data, Topic, Module and Command Executions Access
+Debug Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Cli Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+Console Terminal Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System Console UI and Terminal UI Multi Window Sessions Opened with Environment Setup And Print Environment Variables with PrintenvOutput to Logs 
+API Views, Message, Instrument, Market data, Topic, Module and Command Executions Access for all Autodiscover of Market Data System
+}
