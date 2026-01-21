@@ -261,6 +261,13 @@ func (app *Application) ListManagers() map[ManagerType]ManagerProvider {
 	return managers
 }
 
+// GetUIManager returns the UI manager
+func (app *Application) GetUIManager() *UIManager {
+	app.mu.RLock()
+	defer app.mu.RUnlock()
+	return app.uiManager
+}
+
 // DiscoverCommands discovers available commands
 func (app *Application) DiscoverCommands(ctx context.Context, modulePaths []string) error {
 	return app.commandDiscovery.DiscoverCommands(ctx, modulePaths)

@@ -1,4 +1,3 @@
-package cmd
 package main
 
 import (
@@ -25,11 +24,14 @@ func main() {
 	// Create logger
 	logger := logs.NewStandardLogger(os.Stdout)
 
-	// Load configuration
-	cfg := &conf.Config{}
-	if err := cfg.LoadFromFile(*config); err != nil {
-		logger.Errorf("Failed to load configuration: %v", err)
-		os.Exit(1)
+	// Load configuration using config manager
+	cfgMgr := conf.NewManager()
+	if err := cfgMgr.LoadJSON(*config); err != nil {
+		logger.Warnf("Failed to load configuration file %s, using defaults: %v", *config, err)
+	}
+	cfg := &conf.Config{
+		Environment: make(map[string]string),
+		Gateways:    make(map[string]interface{}),
 	}
 
 	// Create command registry
