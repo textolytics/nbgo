@@ -1,0 +1,43 @@
+name: system
+description: System Configuration
+version: 1.0.0
+settings:
+  - name: environment
+    type: string
+    description: Application environment
+    default: development
+    required: true
+    options:
+      - development
+      - staging
+      - production
+  - name: log_level
+    type: string
+    description: Logging level
+    default: info
+    required: true
+    options:
+      - debug
+      - info
+      - warning
+      - error
+  - name: port
+    type: integer
+    description: Application port
+    default: 8080
+    required: true
+  - name: host
+    type: string
+    description: Application host
+    default: localhost
+    required: true
+  - name: max_connections
+    type: integer
+    description: Maximum concurrent connections
+    default: 1000
+    required: false
+  - name: timeout
+    type: integer
+    description: Request timeout in seconds
+    default: 30
+    required: false

@@ -7,9 +7,9 @@ import (
 	"sync"
 	"time"
 
-	"cli"
-	"conf"
-	"logs"
+	"github.com/textolytics/nbgo/cli"
+	"github.com/textolytics/nbgo/conf"
+	"github.com/textolytics/nbgo/logs"
 )
 
 // ManagerType defines the type of manager

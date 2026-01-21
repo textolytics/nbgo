@@ -18,11 +18,22 @@ nbgo/
 ├── doc/                  # Documentation generation
 ├── dw/                   # Data warehouse implementations (ClickHouse, InfluxDB, Parquet)
 ├── gw/                   # Gateway implementations (Gate.io, Freedx)
+├── gui/                  # GUI management interface
+│   ├── cmd/              # GUI CLI command entry point
+│   ├── ui.go             # UI manager
+│   ├── view.go           # View definitions
+│   ├── session.go        # Session management
+│   ├── managers.go       # Management providers
+│   ├── settings.go       # Settings management
+│   ├── command_discovery.go  # Auto-discovery
+│   ├── keyboard_navigation.go # Input handling
+│   └── application.go    # Application orchestrator
 ├── logs/                 # Logging system
 ├── mb/                   # Message bus implementations (ZMQ, MQTT)
 ├── mcp/                  # Model Context Protocol server
 ├── mon/                  # Monitoring implementations (VictoriaMetrics, InfluxDB, Grafana)
 ├── run/                  # Runtime management
+├── schema/               # Configuration schemas (system, database, api)
 ├── task/                 # Task execution and scheduling
 ├── test/                 # Test utilities
 ├── main.go               # Application entry point
@@ -138,6 +149,64 @@ curl http://localhost:8080/api/v1/providers
 - `health` - Check system health
 - `list` - List available providers
 - `help` - Display help information
+
+## GUI Management Interface
+
+NBGO includes a comprehensive graphical user interface for system management with three operational modes:
+
+### GUI Modes
+
+**Terminal UI Mode** (default)
+```bash
+./nbgo-gui
+```
+Interactive dashboard with:
+- Multiple views (dashboard, data explorer, debug console, monitoring)
+- Real-time system status
+- Configuration editor
+- Log viewer
+- Keyboard navigation
+
+**CLI Mode** - Interactive shell
+```bash
+./nbgo-gui -mode cli
+```
+Commands:
+- `start <service>` - Start a service
+- `stop <service>` - Stop a service
+- `status` - Show system status
+- `config [key] [value]` - Manage configuration
+- `logs [service]` - View service logs
+
+**Settings Mode** - Configuration management
+```bash
+./nbgo-gui -mode settings
+```
+Features:
+- Load schemas from `schema/` directory
+- Aggregate settings from all modules
+- Validate configuration constraints
+- Edit and save settings
+- View comprehensive documentation
+
+### Building GUI CLI
+
+```bash
+go build -o nbgo-gui ./gui/cmd
+./nbgo-gui -mode tui
+```
+
+### GUI Features
+
+- **Auto-Discovery**: Automatically discovers available commands and modules
+- **Command Suggestions**: Intelligent command completion and suggestions
+- **Keyboard Navigation**: Full keyboard support with arrow keys and vim-like commands
+- **Theme Support**: Solarized dark theme with customizable colors
+- **Multi-Window Sessions**: Manage multiple concurrent sessions
+- **Real-Time Updates**: Live system monitoring and status updates
+- **Settings Management**: Load, validate, edit, and save configuration
+
+For detailed GUI documentation, see [gui/cmd/README.md](gui/cmd/README.md)
 
 ## Environment Variables
 

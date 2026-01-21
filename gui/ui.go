@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"sync"
 
-	"cli"
-	"conf"
-	"core"
-	"logs"
+	"github.com/textolytics/nbgo/cli"
+	"github.com/textolytics/nbgo/conf"
+	"github.com/textolytics/nbgo/core"
+	"github.com/textolytics/nbgo/logs"
 )
 
 // UITheme represents the UI theme settings

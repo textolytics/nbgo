@@ -1,0 +1,39 @@
+name: api
+description: API Configuration
+version: 1.0.0
+settings:
+  - name: base_url
+    type: string
+    description: API base URL
+    default: http://localhost:8080
+    required: true
+  - name: version
+    type: string
+    description: API version
+    default: v1
+    required: true
+  - name: rate_limit
+    type: integer
+    description: Rate limit per minute
+    default: 100
+    required: false
+  - name: enable_cors
+    type: boolean
+    description: Enable CORS
+    default: true
+    required: false
+  - name: allowed_origins
+    type: string
+    description: Allowed CORS origins
+    default: "*"
+    required: false
+  - name: request_timeout
+    type: integer
+    description: Request timeout in seconds
+    default: 30
+    required: false
+  - name: max_request_size
+    type: integer
+    description: Maximum request body size in bytes
+    default: 10485760
+    required: false
