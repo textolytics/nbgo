@@ -18,17 +18,17 @@ type UISession struct {
 
 // Window represents a UI window
 type Window struct {
-	mu          sync.RWMutex
-	ID          string
-	Title       string
-	View        *View
-	X           int
-	Y           int
-	Width       int
-	Height      int
-	Active      bool
-	ZIndex      int
-	Content     string
+	mu      sync.RWMutex
+	ID      string
+	Title   string
+	View    *View
+	X       int
+	Y       int
+	Width   int
+	Height  int
+	Active  bool
+	ZIndex  int
+	Content string
 }
 
 // NewWindow creates a new window

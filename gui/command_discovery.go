@@ -1,5 +1,4 @@
 package gui
-package gui
 
 import (
 	"context"

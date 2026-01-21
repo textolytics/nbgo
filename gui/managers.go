@@ -1,5 +1,4 @@
 package gui
-package gui
 
 import (
 	"context"
@@ -65,25 +64,25 @@ type BaseManager struct {
 
 // ModuleInfo contains information about a module
 type ModuleInfo struct {
-	Name        string
-	Status      string
-	Description string
-	Commands    []string
+	Name         string
+	Status       string
+	Description  string
+	Commands     []string
 	Dependencies []string
 }
 
 // ServiceInfo contains information about a service
 type ServiceInfo struct {
-	Name        string
-	Status      string
-	PID         int
-	Port        int
-	Memory      uint64
-	StartTime   time.Time
+	Name      string
+	Status    string
+	PID       int
+	Port      int
+	Memory    uint64
+	StartTime time.Time
 }
 
 // NewBaseManager creates a new base manager
-func NewBaseManager(managerType ManagerType, name string, logger logs.Logger, 
+func NewBaseManager(managerType ManagerType, name string, logger logs.Logger,
 	config *conf.Config, cmdReg *cli.CommandRegistry, uiMgr *UIManager) *BaseManager {
 	return &BaseManager{
 		managerType:     managerType,
@@ -180,20 +179,20 @@ type InstallPrerequisitesManager struct {
 
 // PrerequisiteInfo contains information about a prerequisite
 type PrerequisiteInfo struct {
-	Name          string
-	Version       string
-	Required      bool
-	Installed     bool
-	InstallCmd    string
-	CheckCmd      string
-	Description   string
+	Name        string
+	Version     string
+	Required    bool
+	Installed   bool
+	InstallCmd  string
+	CheckCmd    string
+	Description string
 }
 
 // NewInstallPrerequisitesManager creates a new install prerequisites manager
-func NewInstallPrerequisitesManager(logger logs.Logger, config *conf.Config, 
+func NewInstallPrerequisitesManager(logger logs.Logger, config *conf.Config,
 	cmdReg *cli.CommandRegistry, uiMgr *UIManager) *InstallPrerequisitesManager {
 	return &InstallPrerequisitesManager{
-		BaseManager: NewBaseManager(ManagerTypeInstallPrerequisites, 
+		BaseManager: NewBaseManager(ManagerTypeInstallPrerequisites,
 			"Install Prerequisites Manager", logger, config, cmdReg, uiMgr),
 		prerequisites: make(map[string]PrerequisiteInfo),
 	}
@@ -257,7 +256,7 @@ func (ipm *InstallPrerequisitesManager) Initialize(ctx context.Context) error {
 }
 
 // Execute executes a prerequisite operation
-func (ipm *InstallPrerequisitesManager) Execute(ctx context.Context, operation string, 
+func (ipm *InstallPrerequisitesManager) Execute(ctx context.Context, operation string,
 	params map[string]interface{}) error {
 	ipm.logger.Infof("Executing operation: %s", operation)
 	return nil
@@ -305,10 +304,10 @@ type EnvironmentManager struct {
 }
 
 // NewEnvironmentManager creates a new environment manager
-func NewEnvironmentManager(logger logs.Logger, config *conf.Config, 
+func NewEnvironmentManager(logger logs.Logger, config *conf.Config,
 	cmdReg *cli.CommandRegistry, uiMgr *UIManager) *EnvironmentManager {
 	return &EnvironmentManager{
-		BaseManager: NewBaseManager(ManagerTypeEnvironment, 
+		BaseManager: NewBaseManager(ManagerTypeEnvironment,
 			"Environment Manager", logger, config, cmdReg, uiMgr),
 		envConfig: make(map[string]map[string]string),
 	}
@@ -321,7 +320,7 @@ func (em *EnvironmentManager) Initialize(ctx context.Context) error {
 }
 
 // Execute executes an environment operation
-func (em *EnvironmentManager) Execute(ctx context.Context, operation string, 
+func (em *EnvironmentManager) Execute(ctx context.Context, operation string,
 	params map[string]interface{}) error {
 	em.logger.Infof("Executing environment operation: %s", operation)
 	return nil
@@ -358,10 +357,10 @@ type ConfigureManager struct {
 }
 
 // NewConfigureManager creates a new configure manager
-func NewConfigureManager(logger logs.Logger, config *conf.Config, 
+func NewConfigureManager(logger logs.Logger, config *conf.Config,
 	cmdReg *cli.CommandRegistry, uiMgr *UIManager) *ConfigureManager {
 	return &ConfigureManager{
-		BaseManager: NewBaseManager(ManagerTypeConfigure, 
+		BaseManager: NewBaseManager(ManagerTypeConfigure,
 			"Configure Manager", logger, config, cmdReg, uiMgr),
 	}
 }
@@ -373,7 +372,7 @@ func (cm *ConfigureManager) Initialize(ctx context.Context) error {
 }
 
 // Execute executes a configure operation
-func (cm *ConfigureManager) Execute(ctx context.Context, operation string, 
+func (cm *ConfigureManager) Execute(ctx context.Context, operation string,
 	params map[string]interface{}) error {
 	cm.logger.Infof("Executing configure operation: %s", operation)
 	return nil
@@ -409,10 +408,10 @@ type BuildManager struct {
 }
 
 // NewBuildManager creates a new build manager
-func NewBuildManager(logger logs.Logger, config *conf.Config, 
+func NewBuildManager(logger logs.Logger, config *conf.Config,
 	cmdReg *cli.CommandRegistry, uiMgr *UIManager) *BuildManager {
 	return &BuildManager{
-		BaseManager: NewBaseManager(ManagerTypeBuild, 
+		BaseManager: NewBaseManager(ManagerTypeBuild,
 			"Build Manager", logger, config, cmdReg, uiMgr),
 	}
 }
@@ -424,7 +423,7 @@ func (bm *BuildManager) Initialize(ctx context.Context) error {
 }
 
 // Execute executes a build operation
-func (bm *BuildManager) Execute(ctx context.Context, operation string, 
+func (bm *BuildManager) Execute(ctx context.Context, operation string,
 	params map[string]interface{}) error {
 	bm.logger.Infof("Executing build operation: %s", operation)
 	return nil
@@ -460,10 +459,10 @@ type InstallManager struct {
 }
 
 // NewInstallManager creates a new install manager
-func NewInstallManager(logger logs.Logger, config *conf.Config, 
+func NewInstallManager(logger logs.Logger, config *conf.Config,
 	cmdReg *cli.CommandRegistry, uiMgr *UIManager) *InstallManager {
 	return &InstallManager{
-		BaseManager: NewBaseManager(ManagerTypeInstall, 
+		BaseManager: NewBaseManager(ManagerTypeInstall,
 			"Install Manager", logger, config, cmdReg, uiMgr),
 	}
 }
@@ -475,7 +474,7 @@ func (im *InstallManager) Initialize(ctx context.Context) error {
 }
 
 // Execute executes an install operation
-func (im *InstallManager) Execute(ctx context.Context, operation string, 
+func (im *InstallManager) Execute(ctx context.Context, operation string,
 	params map[string]interface{}) error {
 	im.logger.Infof("Executing install operation: %s", operation)
 	return nil

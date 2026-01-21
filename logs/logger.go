@@ -51,6 +51,15 @@ type Logger interface {
 
 	// SetLevel sets the minimum log level
 	SetLevel(level LogLevel)
+
+	// Warnf logs a formatted warning message
+	Warnf(format string, args ...interface{})
+
+	// Infof logs a formatted info message
+	Infof(format string, args ...interface{})
+
+	// Errorf logs a formatted error message
+	Errorf(format string, args ...interface{})
 }
 
 // StandardLogger implements the Logger interface
@@ -144,6 +153,24 @@ func (sl *StandardLogger) SetLevel(level LogLevel) {
 	sl.mu.Lock()
 	defer sl.mu.Unlock()
 	sl.level = level
+}
+
+// Warnf logs a formatted warning message
+func (sl *StandardLogger) Warnf(format string, args ...interface{}) {
+	msg := fmt.Sprintf(format, args...)
+	sl.log(LevelWarning, msg)
+}
+
+// Infof logs a formatted info message
+func (sl *StandardLogger) Infof(format string, args ...interface{}) {
+	msg := fmt.Sprintf(format, args...)
+	sl.log(LevelInfo, msg)
+}
+
+// Errorf logs a formatted error message
+func (sl *StandardLogger) Errorf(format string, args ...interface{}) {
+	msg := fmt.Sprintf(format, args...)
+	sl.log(LevelError, msg)
 }
 
 // levelToString converts LogLevel to string

@@ -135,7 +135,7 @@ type DashboardView struct {
 // DataView represents the data explorer view
 type DataView struct {
 	*View
-	Categories map[string][]string
+	Categories      map[string][]string
 	CurrentCategory string
 }
 
@@ -191,9 +191,9 @@ type APIEndpoint struct {
 // MonitoringView represents the monitoring view
 type MonitoringView struct {
 	*View
-	Metrics     map[string]interface{}
-	Services    map[string]string
-	Alerts      []Alert
+	Metrics  map[string]interface{}
+	Services map[string]string
+	Alerts   []Alert
 }
 
 // Alert represents a monitoring alert

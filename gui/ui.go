@@ -13,11 +13,11 @@ import (
 
 // UITheme represents the UI theme settings
 type UITheme struct {
-	Name        string
-	Colors      map[string]string
-	Solarized   bool
-	Fancy       bool
-	Borders     bool
+	Name      string
+	Colors    map[string]string
+	Solarized bool
+	Fancy     bool
+	Borders   bool
 }
 
 // SolarizedTheme returns a Solarized dark theme
@@ -28,44 +28,44 @@ func SolarizedTheme() *UITheme {
 		Fancy:     true,
 		Borders:   true,
 		Colors: map[string]string{
-			"base03":      "#002b36",
-			"base02":      "#073642",
-			"base01":      "#586e75",
-			"base00":      "#657b83",
-			"base0":       "#839496",
-			"base1":       "#93a1a1",
-			"base2":       "#eee8d5",
-			"base3":       "#fdf6e3",
-			"yellow":      "#b58900",
-			"orange":      "#cb4b16",
-			"red":         "#dc322f",
-			"magenta":     "#d33682",
-			"violet":      "#6c71c4",
-			"blue":        "#268bd2",
-			"cyan":        "#2aa198",
-			"green":       "#859900",
-			"success":     "#859900",
-			"error":       "#dc322f",
-			"warning":     "#b58900",
-			"info":        "#268bd2",
+			"base03":  "#002b36",
+			"base02":  "#073642",
+			"base01":  "#586e75",
+			"base00":  "#657b83",
+			"base0":   "#839496",
+			"base1":   "#93a1a1",
+			"base2":   "#eee8d5",
+			"base3":   "#fdf6e3",
+			"yellow":  "#b58900",
+			"orange":  "#cb4b16",
+			"red":     "#dc322f",
+			"magenta": "#d33682",
+			"violet":  "#6c71c4",
+			"blue":    "#268bd2",
+			"cyan":    "#2aa198",
+			"green":   "#859900",
+			"success": "#859900",
+			"error":   "#dc322f",
+			"warning": "#b58900",
+			"info":    "#268bd2",
 		},
 	}
 }
 
 // UIManager manages the user interface
 type UIManager struct {
-	mu               sync.RWMutex
-	theme            *UITheme
-	logger           logs.Logger
-	commandRegistry  *cli.CommandRegistry
-	config           *conf.Config
-	providers        map[string]core.Provider
-	views            map[string]*View
-	activeView       string
-	sessions         map[string]*UISession
-	commandHistory   []string
-	autoDiscovery    bool
-	keyboardNav      bool
+	mu              sync.RWMutex
+	theme           *UITheme
+	logger          logs.Logger
+	commandRegistry *cli.CommandRegistry
+	config          *conf.Config
+	providers       map[string]core.Provider
+	views           map[string]*View
+	activeView      string
+	sessions        map[string]*UISession
+	commandHistory  []string
+	autoDiscovery   bool
+	keyboardNav     bool
 }
 
 // NewUIManager creates a new UI manager
@@ -93,15 +93,15 @@ func (um *UIManager) Initialize(ctx context.Context) error {
 
 	// Initialize default views
 	views := map[string]*View{
-		"dashboard":      NewView("dashboard", "Main Dashboard", "System Dashboard"),
-		"data":           NewView("data", "Data Explorer", "Browse Market Data"),
-		"debug":          NewView("debug", "Debug Console", "Debug Information"),
-		"cli":            NewView("cli", "CLI Console", "Command Line Interface"),
-		"terminal":       NewView("terminal", "Terminal", "System Terminal"),
-		"api":            NewView("api", "API Explorer", "API Endpoints"),
-		"monitoring":     NewView("monitoring", "Monitoring", "System Monitoring"),
-		"logs":           NewView("logs", "Logs", "System Logs"),
-		"environment":    NewView("environment", "Environment", "Environment Variables"),
+		"dashboard":     NewView("dashboard", "Main Dashboard", "System Dashboard"),
+		"data":          NewView("data", "Data Explorer", "Browse Market Data"),
+		"debug":         NewView("debug", "Debug Console", "Debug Information"),
+		"cli":           NewView("cli", "CLI Console", "Command Line Interface"),
+		"terminal":      NewView("terminal", "Terminal", "System Terminal"),
+		"api":           NewView("api", "API Explorer", "API Endpoints"),
+		"monitoring":    NewView("monitoring", "Monitoring", "System Monitoring"),
+		"logs":          NewView("logs", "Logs", "System Logs"),
+		"environment":   NewView("environment", "Environment", "Environment Variables"),
 		"configuration": NewView("configuration", "Configuration", "System Configuration"),
 	}
 
@@ -221,7 +221,7 @@ func (um *UIManager) ExecuteCommand(ctx context.Context, cmdName string, args []
 	um.commandHistory = append(um.commandHistory, cmdName)
 	um.mu.Unlock()
 
-	um.logger.Infof("Executing command: %s %v", cmdName, args)
+	um.logger.Info(fmt.Sprintf("Executing command: %s %v", cmdName, args))
 
 	// Command would be executed through the command registry
 	return nil

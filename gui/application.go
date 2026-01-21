@@ -14,21 +14,21 @@ import (
 
 // Application represents the main GUI application
 type Application struct {
-	mu                 sync.RWMutex
-	name               string
-	version            string
-	config             *conf.Config
-	logger             logs.Logger
-	uiManager          *UIManager
-	commandRegistry    *cli.CommandRegistry
-	commandDiscovery   *CommandDiscovery
-	keyboardHandler    *KeyboardHandler
-	navigationCtrl     *NavigationController
-	managers           map[ManagerType]ManagerProvider
-	running            bool
-	startTime          time.Time
-	sessionManager     *SessionManager
-	eventBus           *EventBus
+	mu               sync.RWMutex
+	name             string
+	version          string
+	config           *conf.Config
+	logger           logs.Logger
+	uiManager        *UIManager
+	commandRegistry  *cli.CommandRegistry
+	commandDiscovery *CommandDiscovery
+	keyboardHandler  *KeyboardHandler
+	navigationCtrl   *NavigationController
+	managers         map[ManagerType]ManagerProvider
+	running          bool
+	startTime        time.Time
+	sessionManager   *SessionManager
+	eventBus         *EventBus
 }
 
 // SessionManager manages UI sessions
@@ -52,18 +52,18 @@ type Event struct {
 }
 
 // NewApplication creates a new GUI application
-func NewApplication(name, version string, config *conf.Config, logger logs.Logger, 
+func NewApplication(name, version string, config *conf.Config, logger logs.Logger,
 	cmdReg *cli.CommandRegistry) *Application {
 	return &Application{
-		name:            name,
-		version:         version,
-		config:          config,
-		logger:          logger,
-		commandRegistry: cmdReg,
+		name:             name,
+		version:          version,
+		config:           config,
+		logger:           logger,
+		commandRegistry:  cmdReg,
 		commandDiscovery: NewCommandDiscovery(),
-		keyboardHandler: NewKeyboardHandler(),
-		navigationCtrl:  NewNavigationController(),
-		managers:        make(map[ManagerType]ManagerProvider),
+		keyboardHandler:  NewKeyboardHandler(),
+		navigationCtrl:   NewNavigationController(),
+		managers:         make(map[ManagerType]ManagerProvider),
 		sessionManager: &SessionManager{
 			sessions: make(map[string]*UISession),
 		},
