@@ -9,6 +9,7 @@ pytest-timeout==2.2.0
 # Robot Framework
 robotframework==7.0
 robotframework-seleniumlibrary==6.1.3
+rf-mcp==0.26.0
 
 # Data Science and Utilities
 numpy==1.24.3
