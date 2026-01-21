@@ -1,18 +1,25 @@
 {
   "version": "0.2.0",
   "configurations": [
-    
+
     {
-      "name": "Python Debugger: FastAPI",
-      "type": "debugpy",
+      "name": "Python: FastAPI (uvicorn)",
+      "type": "python",
       "request": "launch",
       "module": "uvicorn",
       "args": [
         "main:app",
-        "--reload"
+        "--reload",
+        "--host", "127.0.0.1",
+        "--port", "8000"
       ],
-      "jinja": true
+      "console": "integratedTerminal",
+      "jinja": true,
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
     },
+
     {
       "name": "Go: Debug Gateway",
       "type": "go",
@@ -23,6 +30,7 @@
       "env": {},
       "args": []
     },
+
     {
       "name": "Python: Current File",
       "type": "python",
@@ -31,5 +39,6 @@
       "console": "integratedTerminal",
       "justMyCode": true
     }
+
   ]
 }
