@@ -15,7 +15,12 @@ require (
 	github.com/textolytics/nbgo/task v0.0.0-20260121013637-a2a097c238fd
 )
 
-require gopkg.in/yaml.v2 v2.4.0 // indirect
+require (
+	github.com/deckarep/golang-set v1.7.1 // indirect
+	github.com/gateio/gatews/go v0.0.0-20250523113507-90357b11b694 // indirect
+	github.com/gorilla/websocket v1.4.2 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
+)
 
 replace (
 	github.com/textolytics/nbgo/cli => ./cli
